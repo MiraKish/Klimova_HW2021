@@ -1,0 +1,21 @@
+package lesson1202.tests;
+
+import lesson1202.code.MyClass;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class MyClassTest extends Assertions {
+
+    @Test
+    public  void firstTest() {
+        // prepare
+        // Action
+        // Check
+
+        MyClass myClass = new MyClass();
+
+        int result = myClass.add(10);
+
+        assertEquals(11, result);
+    }
+}
