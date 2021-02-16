@@ -18,4 +18,7 @@ public class MyClassTest extends Assertions {
 
         assertEquals(11, result);
     }
+
+    // how to name Tests
+    // <Имя тестируемого метода>_<ситуация(какая ситуация тестируется, например, попытка удалить из пустого массива)>_<ожидаемый результат>
 }
