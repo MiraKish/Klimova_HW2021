@@ -21,4 +21,13 @@ public class MyClassTest extends Assertions {
 
     // how to name Tests
     // <Имя тестируемого метода>_<ситуация(какая ситуация тестируется, например, попытка удалить из пустого массива)>_<ожидаемый результат>
+
+    @Test
+    public void secondTest() {
+        MyClass myClass = new MyClass();
+
+        Throwable result = assertThrows(ArithmeticException.class, () -> myClass.throwsException());
+
+        assertEquals("Test exception", result.getMessage());
+    }
 }

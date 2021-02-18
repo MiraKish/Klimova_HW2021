@@ -61,7 +61,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MyClassTest.secondTest">
     <configuration name="MyClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw12022021" />
       <extension name="coverage">
@@ -77,8 +77,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyClassTest.secondTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw12022021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson1202.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lesson1202.tests" />
+      <option name="MAIN_CLASS_NAME" value="lesson1202.tests.MyClassTest" />
+      <option name="METHOD_NAME" value="secondTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyClassTest.secondTest" />
         <item itemvalue="JUnit.MyClassTest" />
       </list>
     </recent_temporary>
@@ -107,6 +124,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom" timestamp="1613504557230">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
+    <state width="1322" height="187" key="GridCell.Tab.0.center" timestamp="1613504557230">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
+    <state width="1322" height="187" key="GridCell.Tab.0.left" timestamp="1613504557230">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
+    <state width="1322" height="187" key="GridCell.Tab.0.right" timestamp="1613504557230">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
     <state x="387" y="275" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613503802519">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
