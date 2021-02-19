@@ -19,4 +19,21 @@ public class DynamicArrayTests extends Assertions {
         DynamicArray dynamicArray = new DynamicArray();
         assertThrows(ArithmeticException.class, () -> dynamicArray.getVal(16));
     }
+
+    @Test
+    public void DynamicArray_setVal_SetsValue() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.setVal(5,12);
+        assertEquals(12, dynamicArray.getVal(5));
+    }
+
+    @Test
+    public void DynamicArray_getVal_GetsValue() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.setVal(5,10);
+        dynamicArray.getVal(5);
+        assertEquals(10, dynamicArray.getVal(5));
+    }
 }
