@@ -63,7 +63,39 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/university/src/impl/SimpleGame.java" />
   </component>
-  <component name="RunManager" selected="JUnit.MyClassTest.secondTest">
+  <component name="RunManager" selected="JUnit.DynamicArrayTests.DynamicArray_setVal_throwsException">
+    <configuration name="DynamicArrayTests.DynamicArray_Size_Exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw12022021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DynamicArrayHW.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DynamicArrayHW" />
+      <option name="MAIN_CLASS_NAME" value="DynamicArrayHW.DynamicArrayTests" />
+      <option name="METHOD_NAME" value="DynamicArray_Size_Exception" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicArrayTests.DynamicArray_setVal_throwsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw12022021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DynamicArrayHW.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DynamicArrayHW" />
+      <option name="MAIN_CLASS_NAME" value="DynamicArrayHW.DynamicArrayTests" />
+      <option name="METHOD_NAME" value="DynamicArray_setVal_throwsException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw12022021" />
       <extension name="coverage">
@@ -97,6 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_setVal_throwsException" />
+        <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_Size_Exception" />
         <item itemvalue="JUnit.MyClassTest.secondTest" />
         <item itemvalue="JUnit.MyClassTest" />
       </list>
@@ -130,22 +164,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1613674582748" />
-    <state width="1322" height="187" key="GridCell.Tab.0.bottom" timestamp="1613675104639">
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom" timestamp="1613762920218">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
-    <state width="1322" height="187" key="GridCell.Tab.0.center" timestamp="1613675104639">
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613762920218" />
+    <state width="1322" height="187" key="GridCell.Tab.0.center" timestamp="1613762920218">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
-    <state width="1322" height="187" key="GridCell.Tab.0.left" timestamp="1613675104639">
+    <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613762920218" />
+    <state width="1322" height="187" key="GridCell.Tab.0.left" timestamp="1613762920218">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
-    <state width="1322" height="187" key="GridCell.Tab.0.right" timestamp="1613675104639">
+    <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613762920218" />
+    <state width="1322" height="187" key="GridCell.Tab.0.right" timestamp="1613762920218">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
+    <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613762920218" />
     <state x="387" y="275" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613503802519">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
