@@ -21,7 +21,10 @@ public class DynamicArray <T> {
         return dataArr.length;
     }
 
-    
+    public void throwsException() {
+        throw new ArithmeticException("Wrong Number");
+    }
+
     public void setVal(int index, T value) {
         if (size() >= index && index >= 0)
             dataArr[index] = value;
@@ -29,8 +32,14 @@ public class DynamicArray <T> {
             throw new RuntimeException("Wrong Index");
     }
 
+    public T getVal(int index) {
+        if (size() >= index && index > 0)
+            return dataArr[index];
+        else
+            throwsException();
+    }
 
-//    public T getVal(int index) {
-//        if ()
-//    }
+    
+
+
 }
