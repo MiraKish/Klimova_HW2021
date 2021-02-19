@@ -17,7 +17,17 @@ public class DynamicArray <T> {
             throw new RuntimeException("Negative Array Size");
     }
 
-    public 
+    public int size() {
+        return dataArr.length;
+    }
+
+    
+    public void setVal(int index, T value) {
+        if (size() >= index && index >= 0)
+            dataArr[index] = value;
+        else
+            throw new RuntimeException("Wrong Index");
+    }
 
 
 //    public T getVal(int index) {
