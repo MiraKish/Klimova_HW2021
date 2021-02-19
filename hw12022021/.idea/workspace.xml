@@ -31,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -60,6 +61,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/university/src/impl/SimpleGame.java" />
   </component>
   <component name="RunManager" selected="JUnit.MyClassTest.secondTest">
     <configuration name="MyClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -124,22 +126,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="187" key="GridCell.Tab.0.bottom" timestamp="1613504557230">
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1613674582748">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
-    <state width="1322" height="187" key="GridCell.Tab.0.center" timestamp="1613504557230">
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1613674582748" />
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom" timestamp="1613675104639">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
-    <state width="1322" height="187" key="GridCell.Tab.0.left" timestamp="1613504557230">
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
+    <state width="1322" height="187" key="GridCell.Tab.0.center" timestamp="1613675104639">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
-    <state width="1322" height="187" key="GridCell.Tab.0.right" timestamp="1613504557230">
+    <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
+    <state width="1322" height="187" key="GridCell.Tab.0.left" timestamp="1613675104639">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613504557230" />
+    <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
+    <state width="1322" height="187" key="GridCell.Tab.0.right" timestamp="1613675104639">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613675104639" />
     <state x="387" y="275" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613503802519">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
