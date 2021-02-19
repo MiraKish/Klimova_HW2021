@@ -63,7 +63,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/university/src/impl/SimpleGame.java" />
   </component>
-  <component name="RunManager" selected="JUnit.DynamicArrayTests.DynamicArray_setVal_throwsException">
+  <component name="RunManager" selected="JUnit.DynamicArrayTests.DynamicArray_getVal_throwsExc">
     <configuration name="DynamicArrayTests.DynamicArray_Size_Exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw12022021" />
       <extension name="coverage">
@@ -75,6 +75,22 @@
       <option name="PACKAGE_NAME" value="DynamicArrayHW" />
       <option name="MAIN_CLASS_NAME" value="DynamicArrayHW.DynamicArrayTests" />
       <option name="METHOD_NAME" value="DynamicArray_Size_Exception" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicArrayTests.DynamicArray_getVal_throwsExc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw12022021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DynamicArrayHW.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DynamicArrayHW" />
+      <option name="MAIN_CLASS_NAME" value="DynamicArrayHW.DynamicArrayTests" />
+      <option name="METHOD_NAME" value="DynamicArray_getVal_throwsExc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,6 +145,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_getVal_throwsExc" />
         <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_setVal_throwsException" />
         <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_Size_Exception" />
         <item itemvalue="JUnit.MyClassTest.secondTest" />

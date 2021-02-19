@@ -13,4 +13,10 @@ public class DynamicArrayTests extends Assertions {
 //        dynamicArray.setVal(16, 11);
         assertThrows(ArithmeticException.class, () -> dynamicArray.setVal(16, 12));
     }
+
+    @Test
+    public void DynamicArray_getVal_throwsExc() {
+        DynamicArray dynamicArray = new DynamicArray();
+        assertThrows(ArithmeticException.class, () -> dynamicArray.getVal(16));
+    }
 }
