@@ -33,13 +33,12 @@ public class DynamicArray <T> {
     }
 
     public T getVal(int index) {
-        if (size() >= index && index > 0)
-            return dataArr[index];
-        else
+        if (size() <= index && index < 0)
             throwsException();
+        return dataArr[index];
     }
 
-    
+
 
 
 }
