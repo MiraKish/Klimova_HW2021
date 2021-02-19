@@ -14,7 +14,7 @@ public class DynamicArray <T> {
         if (size > -1)
             dataArr = (T[]) new Object[size];
         else
-            throw new RuntimeException("Negative Array Size");
+            throwsException();
     }
 
     public int size() {
@@ -38,6 +38,11 @@ public class DynamicArray <T> {
         return dataArr[index];
     }
 
+    public void resize(int newSize) {
+        if (newSize <= 0) {
+            throwsException();
+        }
 
-
+        //something smart
+    }
 }
