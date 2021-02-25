@@ -1,5 +1,7 @@
 package DynamicArrayHW;
 
+import java.util.Arrays;
+
 public class DynamicArray <T> {
 
     private int DEFAULT_SIZE = 15;
@@ -43,6 +45,11 @@ public class DynamicArray <T> {
             throwsException();
         }
 
-        //something smart
+        T[] newArray = dataArr.clone();
+        dataArr = (T[])new Object[newSize];
+
+        for (int i = 0; i < newArray.length; i++) {
+            dataArr[i] = newArray[i];
+        }
     }
 }

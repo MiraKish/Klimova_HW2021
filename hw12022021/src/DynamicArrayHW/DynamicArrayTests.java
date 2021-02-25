@@ -36,4 +36,18 @@ public class DynamicArrayTests extends Assertions {
         dynamicArray.getVal(5);
         assertEquals(10, dynamicArray.getVal(5));
     }
+
+    @Test
+    public void DynamicArray_resize_throwsExc() {
+        DynamicArray dynamicArray = new DynamicArray();
+        assertThrows(ArithmeticException.class, () -> dynamicArray.resize(-1));
+    }
+
+    @Test
+    public void DynamicArray_resize_getsNewSize() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.resize(10);
+        assertEquals(10, dynamicArray.size());
+    }
 }
