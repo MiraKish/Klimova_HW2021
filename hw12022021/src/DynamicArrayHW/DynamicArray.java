@@ -45,11 +45,13 @@ public class DynamicArray <T> {
             throwsException();
         }
 
-        T[] newArray = dataArr.clone();
-        dataArr = (T[])new Object[newSize];
-
-        for (int i = 0; i < newArray.length; i++) {
-            dataArr[i] = newArray[i];
-        }
+//        T[] newArray = dataArr.clone();
+//        dataArr = (T[])new Object[newSize];
+//
+//        for (int i = 0; i < newArray.length; i++) {
+//            dataArr[i] = newArray[i];
+//        }
     }
+
+    
 }
