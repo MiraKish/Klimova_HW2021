@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class DynamicArray <T> {
 
     private int DEFAULT_SIZE = 15;
+    private int current = 0;
 
     private T[] dataArr;
 
@@ -53,5 +54,12 @@ public class DynamicArray <T> {
 //        }
     }
 
-    
+    public int capacity(){
+        return dataArr.length;
+    }
+
+    public void addVal(T value) {
+
+    }
+}
 }
