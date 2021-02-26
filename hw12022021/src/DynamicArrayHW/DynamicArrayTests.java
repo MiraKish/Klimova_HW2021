@@ -74,6 +74,13 @@ public class DynamicArrayTests extends Assertions {
     }
 
     @Test
+    public void DynamicArray_removeVal_throwsExc() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        assertThrows(ArithmeticException.class, () -> dynamicArray.removeVal(-2));
+    }
+
+    @Test
     public void DynamicArray_findLast_printsIndex() {
         DynamicArray dynamicArray = new DynamicArray();
 
