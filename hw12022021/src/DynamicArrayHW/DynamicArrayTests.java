@@ -11,13 +11,13 @@ public class DynamicArrayTests extends Assertions {
 
         DynamicArray dynamicArray = new DynamicArray();
 //        dynamicArray.setVal(16, 11);
-        assertThrows(ArithmeticException.class, () -> dynamicArray.setVal(16, 12));
+        assertThrows(RuntimeException.class, () -> dynamicArray.setVal(16, 12));
     }
 
     @Test
     public void DynamicArray_getVal_throwsExc() {
         DynamicArray dynamicArray = new DynamicArray();
-        assertThrows(ArithmeticException.class, () -> dynamicArray.getVal(16));
+        assertThrows(RuntimeException.class, () -> dynamicArray.getVal(16));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class DynamicArrayTests extends Assertions {
     @Test
     public void DynamicArray_resize_throwsExc() {
         DynamicArray dynamicArray = new DynamicArray();
-        assertThrows(ArithmeticException.class, () -> dynamicArray.resize(-1));
+        assertThrows(RuntimeException.class, () -> dynamicArray.resize(-1));
     }
 
     @Test
@@ -77,7 +77,7 @@ public class DynamicArrayTests extends Assertions {
     public void DynamicArray_removeVal_throwsExc() {
         DynamicArray dynamicArray = new DynamicArray();
 
-        assertThrows(ArithmeticException.class, () -> dynamicArray.removeVal(-2));
+        assertThrows(RuntimeException.class, () -> dynamicArray.removeVal(-2));
     }
 
     @Test
@@ -138,6 +138,6 @@ public class DynamicArrayTests extends Assertions {
     public void DynamicArray_insert_throwsExc() {
         DynamicArray dynamicArray = new DynamicArray();
 
-        assertThrows(ArithmeticException.class, () -> dynamicArray.insert(-1, 21));
+        assertThrows(RuntimeException.class, () -> dynamicArray.insert(-1, 21));
     }
 }
