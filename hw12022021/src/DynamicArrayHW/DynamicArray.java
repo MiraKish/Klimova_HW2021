@@ -51,10 +51,6 @@ public class DynamicArray <T> {
         if (newSize >= 0) {
             System.arraycopy(dataArr, 0, newArray, 0, newSize);
         }
-
-//        for (int i = 0; i < newArray.length; i++) {
-//            dataArr[i] = newArray[i];
-//        }
     }
 
     public void addVal(T value) {
@@ -63,10 +59,21 @@ public class DynamicArray <T> {
         else
             capacity *= 2; // увеличиваем вдвое
         T[] newArr = (T[]) new Object[capacity];
-        for (int i = 0; i < size(); i++) {
+        for (int i = 0; i < size(); i++)
             newArr[i] = dataArr[i];
-        }
         dataArr = newArr;
+    }
+
+//    public void removeVal(int index) {
+//    // ?
+//    }
+
+    public int findLast(T value) {
+        for (int i = size() - 1; i > -1; i--) {
+            if (dataArr[i] == value)
+                return i;
+        }
+        return -1;
     }
 }
 
