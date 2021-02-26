@@ -63,8 +63,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/university/src/impl/SimpleGame.java" />
   </component>
-  <component name="RunManager" selected="JUnit.DynamicArrayTests.DynamicArray_resize_getsNewSize">
-    <configuration name="DynamicArrayTests.DynamicArray_getVal_GetsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DynamicArrayTests.DynamicArray_addVal_addsNewValue">
+    <configuration name="DynamicArrayTests.DynamicArray_addVal_addsNewValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw12022021" />
       <extension name="coverage">
         <pattern>
@@ -74,7 +74,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="DynamicArrayHW" />
       <option name="MAIN_CLASS_NAME" value="DynamicArrayHW.DynamicArrayTests" />
-      <option name="METHOD_NAME" value="DynamicArray_getVal_GetsValue" />
+      <option name="METHOD_NAME" value="DynamicArray_addVal_addsNewValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_addVal_addsNewValue" />
         <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_resize_getsNewSize" />
         <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_resize_throwsExc" />
         <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_size_throwsExc" />
         <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_setVal_SetsValue" />
-        <item itemvalue="JUnit.DynamicArrayTests.DynamicArray_getVal_GetsValue" />
       </list>
     </recent_temporary>
   </component>
@@ -182,22 +182,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1613674582748" />
-    <state width="1322" height="187" key="GridCell.Tab.0.bottom" timestamp="1614280407242">
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom" timestamp="1614323701203">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614280407242" />
-    <state width="1322" height="187" key="GridCell.Tab.0.center" timestamp="1614280407241">
+    <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614323701203" />
+    <state width="1322" height="187" key="GridCell.Tab.0.center" timestamp="1614323701203">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614280407241" />
-    <state width="1322" height="187" key="GridCell.Tab.0.left" timestamp="1614280407241">
+    <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614323701203" />
+    <state width="1322" height="187" key="GridCell.Tab.0.left" timestamp="1614323701203">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614280407241" />
-    <state width="1322" height="187" key="GridCell.Tab.0.right" timestamp="1614280407241">
+    <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614323701203" />
+    <state width="1322" height="187" key="GridCell.Tab.0.right" timestamp="1614323701203">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614280407241" />
+    <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614323701203" />
     <state x="387" y="275" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613503802519">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -206,5 +206,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1613724450382" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1614323954927">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1614323954927" />
   </component>
 </project>

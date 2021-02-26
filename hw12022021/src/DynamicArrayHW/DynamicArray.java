@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class DynamicArray <T> {
 
     private int DEFAULT_SIZE = 15;
-    private int current = 0;
-
+    private int capacity = 16;
     private T[] dataArr;
 
     public DynamicArray() {
@@ -58,12 +57,17 @@ public class DynamicArray <T> {
 //        }
     }
 
-    public int capacity(){
-        return dataArr.length;
-    }
-
     public void addVal(T value) {
-
+        if (size() + 1 >= capacity)
+            capacity = 17;
+        else
+            capacity *= 2; // увеличиваем вдвое
+        T[] newArr = (T[]) new Object[capacity];
+        for (int i = 0; i < size(); i++) {
+            newArr[i] = dataArr[i];
+        }
+        dataArr = newArr;
     }
 }
+
 

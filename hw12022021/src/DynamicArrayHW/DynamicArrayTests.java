@@ -50,4 +50,12 @@ public class DynamicArrayTests extends Assertions {
         dynamicArray.resize(10);
         assertEquals(10, dynamicArray.size());
     }
+
+    @Test
+    public void DynamicArray_addVal_addsNewValue() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.addVal(1);
+        assertEquals(17, dynamicArray.size());
+    }
 }
