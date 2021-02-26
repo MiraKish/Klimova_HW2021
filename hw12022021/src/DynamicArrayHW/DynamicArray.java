@@ -95,7 +95,14 @@ public class DynamicArray <T> {
         return -1;
     }
 
-
+    public void insert(T value, int index) {
+        if (index < 0)
+            throwsException();
+        if (index == capacity) // если capacity равна индексу, то процесс равносилен addVal()
+            addVal(value);
+        else
+            dataArr[index] = value;
+    }
 }
 
 
