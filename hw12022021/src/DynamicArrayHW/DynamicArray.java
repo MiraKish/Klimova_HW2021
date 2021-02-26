@@ -8,6 +8,10 @@ public class DynamicArray <T> {
     private int capacity = 16;
     private T[] dataArr;
 
+    public String wrongIndexExc = "Negative index";
+    public String outOfBordersExc = "Going beyond the array borders";
+    public String negativeSizeExc = "Negative size of the array";
+
     public DynamicArray() {
         dataArr = (T[]) new Object[DEFAULT_SIZE];
     }
@@ -16,33 +20,41 @@ public class DynamicArray <T> {
         if (size > -1)
             dataArr = (T[]) new Object[size];
         else
-            throwsException();
+            throwsNegativeSizeExc();
     }
 
     public int size() {
         return dataArr.length;
     }
 
-    public void throwsException() {
-        throw new ArithmeticException("Wrong");
+    public void throwsNegativeSizeExc() {
+        throw new RuntimeException(negativeSizeExc);
+    }
+
+    public void throwsBordersExc() {
+        throw new RuntimeException(outOfBordersExc);
+    }
+
+    public void throwsWrongIndexExc() {
+        throw new RuntimeException(wrongIndexExc);
     }
 
     public void setVal(int index, T value) {
         if (size() <= index || index < 0)
-            throwsException();
+            throwsBordersExc();
         else
             dataArr[index] = value;
     }
 
     public T getVal(int index) {
         if (size() <= index || index < 0)
-            throwsException();
+            throwsBordersExc();
         return dataArr[index];
     }
 
     public void resize(int newSize) {
         if (newSize <= 0) {
-            throwsException();
+            throwsNegativeSizeExc();
         }
 
         T[] newArray = dataArr.clone();
@@ -53,6 +65,7 @@ public class DynamicArray <T> {
         }
     }
 
+    // магия. не трогать
     public void addVal(T value) {
         if (size() + 1 >= capacity)
             capacity = 17;
@@ -68,7 +81,7 @@ public class DynamicArray <T> {
 
     public void removeVal(int index) {
         if (index >= capacity || index < 0)
-            throwsException();
+            throwsBordersExc();
 
         T[] newArr = (T[]) new Object[size() - 1];
 
@@ -97,7 +110,7 @@ public class DynamicArray <T> {
 
     public void insert(int index, T value) {
         if (index < 0)
-            throwsException();
+            throwsWrongIndexExc();
         if (index == capacity) // если capacity равна индексу, то процесс равносилен addVal()
             addVal(value);
         else
