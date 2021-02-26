@@ -77,6 +77,15 @@ public class DynamicArrayTests extends Assertions {
         assertEquals(10, dynamicArray.findLast(12));
     }
 
+    @Test
+    public void DynamicArray_findLastWrongValue_returnsMinus1() {
+        DynamicArray dynamicArray = new DynamicArray();
 
+        dynamicArray.resize(2);
+        dynamicArray.setVal(0, 12);
+        dynamicArray.setVal(1, 3);
+
+        assertEquals(-1, dynamicArray.findLast(10));
+    }
 
 }
