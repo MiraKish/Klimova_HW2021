@@ -69,7 +69,7 @@ public class DynamicArrayTests extends Assertions {
 //        assertEquals(5, dynamicArray.getVal(4));
 
     @Test
-    public void DynamicArray_findLast_printsVal() {
+    public void DynamicArray_findLast_printsIndex() {
         DynamicArray dynamicArray = new DynamicArray();
 
         dynamicArray.setVal(4, 12);
@@ -86,6 +86,15 @@ public class DynamicArrayTests extends Assertions {
         dynamicArray.setVal(1, 3);
 
         assertEquals(-1, dynamicArray.findLast(10));
+    }
+
+    @Test
+    public void DynamicArray_findFirst_printsIndex() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.setVal(4, 12);
+        dynamicArray.setVal(10, 12);
+        assertEquals(4, dynamicArray.findFirst(12));
     }
 
 }
