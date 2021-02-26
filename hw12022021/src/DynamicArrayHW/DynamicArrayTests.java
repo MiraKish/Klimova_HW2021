@@ -97,4 +97,14 @@ public class DynamicArrayTests extends Assertions {
         assertEquals(4, dynamicArray.findFirst(12));
     }
 
+    @Test
+    public void DynamicArray_findFirstWrongValue_returnsMinus1() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.resize(2);
+        dynamicArray.setVal(0, 12);
+        dynamicArray.setVal(1, 3);
+
+        assertEquals(-1, dynamicArray.findFirst(10));
+    }
 }
