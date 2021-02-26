@@ -119,4 +119,25 @@ public class DynamicArrayTests extends Assertions {
 
         assertEquals(-1, dynamicArray.findFirst(10));
     }
+
+    @Test
+    public void DynamicArray_insert_addsAtRightIndex() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.resize(3);
+        dynamicArray.setVal(0, 12);
+        dynamicArray.setVal(1, 3);
+        dynamicArray.setVal(2, 8);
+
+        dynamicArray.insert(10, 1);
+
+        assertEquals(10, dynamicArray.getVal(1));
+    }
+
+    @Test
+    public void DynamicArray_insert_throwsExc() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        assertThrows(ArithmeticException.class, () -> dynamicArray.insert(14, -1));
+    }
 }
