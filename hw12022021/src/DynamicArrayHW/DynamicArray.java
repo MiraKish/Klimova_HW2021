@@ -58,24 +58,24 @@ public class DynamicArray <T> {
             capacity = 17;
         else
             capacity *= 2; // увеличиваем вдвое
+
         T[] newArr = (T[]) new Object[capacity];
+
         for (int i = 0; i < size(); i++)
             newArr[i] = dataArr[i];
         dataArr = newArr;
     }
 
     public void removeVal(int index) {
-        if (index > capacity && index < 0)
+        if (index >= capacity || index < 0)
             throwsException();
-//            capacity = 17;
-//        else
-//            capacity *= 2;
 
-        T[] newArr = (T[]) new Object[capacity - 1];
-        for (int i = 0; i < index; i++)
+        T[] newArr = (T[]) new Object[size() - 1];
+
+        for (int i = 0; i < index; i++) // до удаленного
             newArr[i] = getVal(i);
-        for (int i = 0; i < size(); i++)
-            newArr[i] = getVal(i + 1);
+        for (int i = index + 1; i < size(); i++) // смещаем на место удаленного идущие за ним значения
+            newArr[i - 1] = getVal(i);
         dataArr = newArr;
     }
 
