@@ -59,14 +59,19 @@ public class DynamicArrayTests extends Assertions {
         assertEquals(17, dynamicArray.size());
     }
 
-//    @Test
-//    public void DynamicArray_removeVal_removesValue() {
-//        DynamicArray dynamicArray = new DynamicArray();
-//
-//        dynamicArray.setVal(4, 12);
-//        dynamicArray.setVal(5, 5);
-//        dynamicArray.removeVal(4);
-//        assertEquals(5, dynamicArray.getVal(4));
+    @Test
+    public void DynamicArray_removeVal_removesValue() {
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.resize(3);
+
+        dynamicArray.setVal(0, 12);
+        dynamicArray.setVal(1, 5);
+        dynamicArray.setVal(2, 1);
+        dynamicArray.removeVal(1);
+
+        assertEquals(2, dynamicArray.size());
+    }
 
     @Test
     public void DynamicArray_findLast_printsIndex() {
