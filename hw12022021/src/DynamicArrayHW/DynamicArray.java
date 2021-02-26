@@ -64,9 +64,20 @@ public class DynamicArray <T> {
         dataArr = newArr;
     }
 
-//    public void removeVal(int index) {
-//    // ?
-//    }
+    public void removeVal(int index) {
+        if (index > capacity && index < 0)
+            throwsException();
+//            capacity = 17;
+//        else
+//            capacity *= 2;
+
+        T[] newArr = (T[]) new Object[capacity - 1];
+        for (int i = 0; i < index; i++)
+            newArr[i] = getVal(i);
+        for (int i = 0; i < size(); i++)
+            newArr[i] = getVal(i + 1);
+        dataArr = newArr;
+    }
 
     public int findLast(T value) {
         for (int i = size() - 1; i > -1; i--) {
@@ -83,6 +94,8 @@ public class DynamicArray <T> {
         }
         return -1;
     }
+
+
 }
 
 
