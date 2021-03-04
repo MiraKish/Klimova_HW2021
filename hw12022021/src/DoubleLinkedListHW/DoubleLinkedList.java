@@ -43,7 +43,7 @@ public class DoubleLinkedList <T> {
             count++;
         }
 
-        DoubleLinkedListElement element = new DoubleLinkedListElement(null, data, head);
+        DoubleLinkedListElement element = new DoubleLinkedListElement(tail, data, head);
 
         oldEl.previous.next = element;
         element.previous = oldEl.previous;
@@ -51,6 +51,15 @@ public class DoubleLinkedList <T> {
         element.next = oldEl;
     }
 
+    public void addFirst(T data) {
+        DoubleLinkedListElement element = new DoubleLinkedListElement(tail, data, head);
 
+        if (emptyList())
+            tail = element;
+        else
+            head.previous = element;
+        element.next = head;
+        head = element;
+    }
 
 }
