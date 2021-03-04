@@ -19,10 +19,10 @@ public class DoubleLinkedList <T> {
         return size;
     }
 
-    public int emptyList() {
-        size = 0;
-        return size;
+    public boolean emptyList() {
+        return head == null;
     }
+
 
 
 }
