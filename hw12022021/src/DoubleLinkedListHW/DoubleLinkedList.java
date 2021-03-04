@@ -62,4 +62,15 @@ public class DoubleLinkedList <T> {
         head = element;
     }
 
+    public void addLast(T data) {
+        DoubleLinkedListElement element = new DoubleLinkedListElement(tail, data, head);
+
+        if (emptyList())
+            head = element;
+        else
+            tail.previous = element;
+
+        element.previous = tail;
+        tail = element;
+    }
 }
