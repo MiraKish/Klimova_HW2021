@@ -100,4 +100,22 @@ public class DoubleLinkedList <T> {
         }
         return null;
     }
+
+    public void removeFirst() {
+        if (head.next == null)
+            tail = null;
+        else
+            head.next.previous = null;
+
+        head = head.next;
+    }
+
+    public void removeLast() {
+        if (head.next == null)
+            head = null;
+        else
+            tail.previous.next = null;
+
+        tail = tail.previous;
+    }
 }
