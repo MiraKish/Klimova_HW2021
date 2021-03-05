@@ -25,18 +25,20 @@ public class DoubleLinkedList <T> {
     }
 
     public DoubleLinkedListElement<T> getByIndex(int index) {
-        DoubleLinkedListElement oldEl = head;
+        DoubleLinkedListElement<T> oldEl = head;
 
-        while (oldEl != null && count != index) {
+        while (oldEl != null) {
+            if (count == index)
+                return oldEl;
             oldEl = oldEl.next;
             count++;
         }
-
+        return null;
         return oldEl;
     }
 
     public void addByIndex(int index, T data) {
-        DoubleLinkedListElement oldEl = head;
+        DoubleLinkedListElement<T> oldEl = head;
 
         while (oldEl != null && count != index) {
             oldEl = oldEl.next;
