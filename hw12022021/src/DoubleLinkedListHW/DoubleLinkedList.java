@@ -118,4 +118,15 @@ public class DoubleLinkedList <T> {
 
         tail = tail.previous;
     }
+
+    public void remove (DoubleLinkedListElement<T> element) {
+
+        if (element == head)
+            removeFirst();
+        if (element == tail)
+            removeLast();
+
+        element.next.previous = element.previous;
+        element.previous.next = element.next;
+    }
 }
