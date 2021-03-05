@@ -6,14 +6,16 @@ public class DoubleLinkedList <T> {
     private int count = 0;
     private int size;
 
+    public String nullPointerExc = "You got Null";
+
     public DoubleLinkedList() {
         head = null;
         tail = null;
         size = 0;
     }
 
-    public void throwException() {
-        throw new RuntimeException();
+    public void throwNullException() {
+        throw new RuntimeException(nullPointerExc);
     }
 
     public int getSize() {
@@ -26,13 +28,13 @@ public class DoubleLinkedList <T> {
 
     public T getHead() {
         if (head == null)
-            return null;
+            throwNullException();
         return head.data;
     }
 
     public T getTail() {
         if (tail == null)
-            return null;
+            throwNullException();
         return tail.data;
     }
 
@@ -48,7 +50,7 @@ public class DoubleLinkedList <T> {
         return null;
     }
 
-    public void addByIndex(int index, T data) {
+    public DoubleLinkedListElement<T> addByIndex(int index, T data) {
         DoubleLinkedListElement<T> oldEl = head;
 
         while (oldEl != null && count != index) {
@@ -62,6 +64,7 @@ public class DoubleLinkedList <T> {
         element.previous = oldEl.previous;
         oldEl.previous = oldEl;
         element.next = oldEl;
+        return element;
     }
 
     public void addFirst(T data) {
@@ -85,5 +88,16 @@ public class DoubleLinkedList <T> {
 
         element.previous = tail;
         tail = element;
+    }
+
+    public DoubleLinkedListElement<T> findByData(T data) {
+        DoubleLinkedListElement<T> neededEl = head;
+
+        while (neededEl != null) {
+            if (neededEl.data.equals(data))
+                return neededEl;
+            neededEl = neededEl.next;
+        }
+        return null;
     }
 }
