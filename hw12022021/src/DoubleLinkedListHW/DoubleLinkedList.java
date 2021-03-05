@@ -1,8 +1,8 @@
 package DoubleLinkedListHW;
 
 public class DoubleLinkedList <T> {
-    private DoubleLinkedListElement head;
-    private DoubleLinkedListElement tail;
+    private DoubleLinkedListElement<T> head;
+    private DoubleLinkedListElement<T> tail;
     private int count = 0;
     private int size;
 
