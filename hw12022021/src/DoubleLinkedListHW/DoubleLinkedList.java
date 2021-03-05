@@ -24,17 +24,28 @@ public class DoubleLinkedList <T> {
         return head == null;
     }
 
-    public DoubleLinkedListElement<T> getByIndex(int index) {
+    public T getHead() {
+        if (head == null)
+            return null;
+        return head.data;
+    }
+
+    public T getTail() {
+        if (tail == null)
+            return null;
+        return tail.data;
+    }
+
+    public T getByIndex(int index) {
         DoubleLinkedListElement<T> oldEl = head;
 
         while (oldEl != null) {
             if (count == index)
-                return oldEl;
+                return oldEl.data;
             oldEl = oldEl.next;
             count++;
         }
         return null;
-        return oldEl;
     }
 
     public void addByIndex(int index, T data) {
