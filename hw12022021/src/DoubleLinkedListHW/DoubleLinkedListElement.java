@@ -1,9 +1,9 @@
 package DoubleLinkedListHW;
 
 public class DoubleLinkedListElement <T> {
-    DoubleLinkedListElement previous;
+    DoubleLinkedListElement<T> previous;
     T data;
-    DoubleLinkedListElement next;
+    DoubleLinkedListElement<T> next;
 
     public DoubleLinkedListElement(DoubleLinkedListElement Previous, T Data, DoubleLinkedListElement Next) {
         previous = Previous;
