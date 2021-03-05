@@ -24,4 +24,15 @@ public class DLLTest extends Assertions {
 
         assertEquals(5, doubleLinkedList.getTail());
     }
+
+    @Test
+    public void DoubleLinkedList_removeFirst_removesHead() {
+
+        DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
+
+        doubleLinkedList.addFirst(5);
+        doubleLinkedList.removeFirst();
+
+        assertEquals(null, doubleLinkedList.getHead());
+    }
 }
