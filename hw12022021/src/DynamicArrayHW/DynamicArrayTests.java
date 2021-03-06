@@ -140,4 +140,21 @@ public class DynamicArrayTests extends Assertions {
 
         assertThrows(RuntimeException.class, () -> dynamicArray.insert(-1, 21));
     }
+
+    @Test
+    public void addVal_size18_newSize19() {
+        DynamicArray<Integer> arr = new DynamicArray<>(18);
+        arr.addVal(100);
+        assertEquals(19, arr.size());
+    }
+
+    @Test
+    public void findFirst_findExistingFirst_getCorrectIndex() {
+        DynamicArray<String> arr = new DynamicArray<>(10);
+        for (int i = 0; i < arr.size(); ++i)
+        {
+            arr.setVal(i, "item_" + i);
+        }
+        assertEquals(0, arr.findFirst("item_0"));
+    }
 }
