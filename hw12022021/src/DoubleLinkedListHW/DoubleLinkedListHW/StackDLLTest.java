@@ -30,4 +30,16 @@ public class StackDLLTest extends Assertions  {
 
         assertThrows(RuntimeException.class, () -> stackDLL.push(8));
     }
+
+    @Test
+    public void getSize_size0_size3() {
+
+        StackDLL<Integer> stackDLL = new StackDLL<Integer>();
+
+        stackDLL.push(1);
+        stackDLL.push(2);
+        stackDLL.push(3);
+
+        assertEquals(3, stackDLL.getSize());
+    }
 }

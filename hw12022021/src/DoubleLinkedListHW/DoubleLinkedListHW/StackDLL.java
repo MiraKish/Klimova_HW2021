@@ -3,7 +3,7 @@ package DoubleLinkedListHW;
 public class StackDLL <T> {
 //    private T dataTop;
     private int top = -1;
-    private int size = 7;
+//    private int size = 7;
     private int DEFAULT_SIZE = 7;
     private int actualSize = 0;
 
@@ -39,5 +39,6 @@ public class StackDLL <T> {
     public T peek() {
         return doubleLinkedList.getTail();
     }
+
 
 }
