@@ -37,7 +37,7 @@ public class StackDLL <T> {
     }
 
     public T peek() {
-        return doubleLinkedList.getHead();
+        return doubleLinkedList.getTail();
     }
 
 }
