@@ -36,5 +36,37 @@ public class DLLTest extends Assertions {
         assertEquals(null, doubleLinkedList.getHead());
     }
 
+//    @Test
+//    public void addByIndex_addNewValue_adds5at2() {
+//
+//        DoubleLinkedList<Integer> doubleLinkedList = new DoubleLinkedList<Integer>();
+//
+//        doubleLinkedList.addFirst(1);
+//        doubleLinkedList.addByIndex(1, 8);
+//        doubleLinkedList.addByIndex(2,5);
+//
+//        assertEquals(1, doubleLinkedList.getByIndex(0));
+//    }
+
+    @Test
+    public void getSize_size0_size1() {
+
+        DoubleLinkedList<Integer> doubleLinkedList = new DoubleLinkedList<Integer>();
+
+        doubleLinkedList.addFirst(5);
+
+        assertEquals(1, doubleLinkedList.getSize());
+    }
+
+    @Test
+    public void getSize_size0_size2() {
+
+        DoubleLinkedList<Integer> doubleLinkedList = new DoubleLinkedList<Integer>();
+
+        doubleLinkedList.addFirst(5);
+        doubleLinkedList.addLast(8);
+
+        assertEquals(2, doubleLinkedList.getSize());
+    }
 
 }
