@@ -42,4 +42,24 @@ public class StackDLLTest extends Assertions  {
 
         assertEquals(3, stackDLL.getSize());
     }
+
+    @Test
+    public void pop_returnsNewTop_top1() {
+
+        StackDLL<Integer> stackDLL = new StackDLL<Integer>();
+
+        stackDLL.push(1);
+        stackDLL.push(2);
+        stackDLL.pop();
+
+        assertEquals(1, stackDLL.peek());
+    }
+
+    @Test
+    public void pop_emptyList_throwsExc() {
+
+        StackDLL<Integer> stackDLL = new StackDLL<Integer>();
+
+        assertThrows(RuntimeException.class, () -> stackDLL.pop());
+    }
 }
