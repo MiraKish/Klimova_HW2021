@@ -1,15 +1,17 @@
 package DoubleLinkedListHW;
 
 public class StackDLL <T> {
-    private DoubleLinkedList<T> dataStack;
-    private T top;
+//    private T dataTop;
+    private int top = -1;
+    private int size = 7;
+    private int DEFAULT_SIZE = 7;
+    private int actualSize = 0;
 
     DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
 
     public StackDLL() {
         DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
-        dataStack = doubleLinkedList;
-        top = dataStack.getHead();
+//        dataTop = dataStack.getHead();
     }
 
     public int getSize() {
@@ -21,9 +23,15 @@ public class StackDLL <T> {
     }
 
     public void push(T data) {
-        top = data;
+        if (actualSize == DEFAULT_SIZE)
+            throwStackIsFull();
+        top++;
+        doubleLinkedList.addLast(data);
+        actualSize++;
     }
 
-    
+    public T peek() {
+        return doubleLinkedList.getHead();
+    }
 
 }
