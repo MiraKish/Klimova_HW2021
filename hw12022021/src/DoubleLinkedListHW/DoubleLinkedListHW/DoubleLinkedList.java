@@ -58,17 +58,18 @@ public class DoubleLinkedList <T> {
             count++;
         }
 
-        DoubleLinkedListElement element = new DoubleLinkedListElement(tail, data, head);
+        DoubleLinkedListElement<T> element = new DoubleLinkedListElement<>(tail, data, head);
 
         oldEl.previous.next = element;
         element.previous = oldEl.previous;
         oldEl.previous = oldEl;
         element.next = oldEl;
+        size++;
         return element;
     }
 
     public void addFirst(T data) {
-        DoubleLinkedListElement element = new DoubleLinkedListElement(tail, data, head);
+        DoubleLinkedListElement<T> element = new DoubleLinkedListElement<>(tail, data, head);
 
         if (emptyList())
             tail = element;
@@ -76,10 +77,11 @@ public class DoubleLinkedList <T> {
             head.previous = element;
         element.next = head;
         head = element;
+        size++;
     }
 
     public void addLast(T data) {
-        DoubleLinkedListElement element = new DoubleLinkedListElement(tail, data, head);
+        DoubleLinkedListElement<T> element = new DoubleLinkedListElement<>(tail, data, head);
 
         if (emptyList())
             head = element;
@@ -88,6 +90,7 @@ public class DoubleLinkedList <T> {
 
         element.previous = tail;
         tail = element;
+        size++;
     }
 
     public DoubleLinkedListElement<T> findByData(T data) {
@@ -108,6 +111,7 @@ public class DoubleLinkedList <T> {
             head.next.previous = null;
 
         head = head.next;
+        size--;
     }
 
     public void removeLast() {
@@ -117,6 +121,7 @@ public class DoubleLinkedList <T> {
             tail.previous.next = null;
 
         tail = tail.previous;
+        size--;
     }
 
     public void remove (DoubleLinkedListElement<T> element) {
@@ -128,5 +133,7 @@ public class DoubleLinkedList <T> {
 
         element.next.previous = element.previous;
         element.previous.next = element.next;
+
+        size--;
     }
 }
