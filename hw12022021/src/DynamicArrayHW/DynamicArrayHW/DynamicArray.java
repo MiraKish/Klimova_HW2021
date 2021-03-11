@@ -6,9 +6,9 @@ public class DynamicArray <T> {
     private int capacity = 16;
     private T[] dataArr;
 
-    public String wrongIndexExc = "Negative index";
-    public String outOfBordersExc = "Going beyond the array borders";
-    public String negativeSizeExc = "Negative size of the array";
+    private String wrongIndexExc = "Negative index";
+    private String outOfBordersExc = "Going beyond the array borders";
+    private String negativeSizeExc = "Negative size of the array";
 
     public DynamicArray() {
         dataArr = (T[]) new Object[DEFAULT_SIZE];
@@ -25,15 +25,15 @@ public class DynamicArray <T> {
         return dataArr.length;
     }
 
-    public void throwsNegativeSizeExc() {
+    private void throwsNegativeSizeExc() {
         throw new RuntimeException(negativeSizeExc);
     }
 
-    public void throwsBordersExc() {
+    private void throwsBordersExc() {
         throw new RuntimeException(outOfBordersExc);
     }
 
-    public void throwsWrongIndexExc() {
+    private void throwsWrongIndexExc() {
         throw new RuntimeException(wrongIndexExc);
     }
 
