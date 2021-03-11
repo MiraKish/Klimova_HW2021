@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Assertions;
 public class DLLTest extends Assertions {
 
     @Test
-    public void DoubleLinkedList_addFirst_addsData() {
+    public void addFirst_addsHead_headEquals2() {
 
-        DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
+        DoubleLinkedList<Integer> doubleLinkedList = new DoubleLinkedList<Integer>();
 
         doubleLinkedList.addFirst(2);
 
@@ -16,9 +16,9 @@ public class DLLTest extends Assertions {
     }
 
     @Test
-    public void DoubleLinkedList_addLast_addsData() {
+    public void addLast_addsTail_tailEquals5() {
 
-        DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
+        DoubleLinkedList<Integer> doubleLinkedList = new DoubleLinkedList<Integer>();
 
         doubleLinkedList.addLast(5);
 
@@ -26,13 +26,15 @@ public class DLLTest extends Assertions {
     }
 
     @Test
-    public void DoubleLinkedList_removeFirst_removesHead() {
+    public void removeFirst_removesHead_getNull() {
 
-        DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
+        DoubleLinkedList<Integer> doubleLinkedList = new DoubleLinkedList<Integer>();
 
         doubleLinkedList.addFirst(5);
         doubleLinkedList.removeFirst();
 
         assertEquals(null, doubleLinkedList.getHead());
     }
+
+
 }
