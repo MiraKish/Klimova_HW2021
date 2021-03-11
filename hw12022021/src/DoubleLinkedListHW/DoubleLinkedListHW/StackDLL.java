@@ -10,9 +10,14 @@ public class StackDLL <T> {
     DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
 
     private String stackIsFull = "Too many items in a stack";
+    private String emptyStack = "Stack is empty";
 
     private void throwsStackIsFull() {
         throw new RuntimeException(stackIsFull);
+    }
+
+    private void throwsEmptyStack() {
+        throw new RuntimeException(emptyStack);
     }
 
     public StackDLL() {
@@ -40,5 +45,14 @@ public class StackDLL <T> {
         return doubleLinkedList.getTail();
     }
 
+    public T pop() {
+        if (emptyStack())
+            throwsEmptyStack();
 
+        T element = doubleLinkedList.getTail();
+        doubleLinkedList.removeLast();
+        top--;
+        actualSize--;
+        return element;
+    }
 }
