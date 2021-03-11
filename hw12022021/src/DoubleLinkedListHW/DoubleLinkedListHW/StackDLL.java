@@ -9,6 +9,12 @@ public class StackDLL <T> {
 
     DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
 
+    private String stackIsFull = "Too many items in a stack";
+
+    private void throwStackIsFull() {
+        throw new RuntimeException(stackIsFull);
+    }
+
     public StackDLL() {
         DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
 //        dataTop = dataStack.getHead();
