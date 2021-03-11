@@ -27,8 +27,7 @@ public class StackDLLTest extends Assertions  {
         stackDLL.push(6);
         stackDLL.push(6);
         stackDLL.push(6);
-        stackDLL.push(6);
 
-        assertThrows(RuntimeException.class, () -> stackDLL.push(7));
+        assertThrows(RuntimeException.class, () -> stackDLL.push(8));
     }
 }

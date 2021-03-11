@@ -11,7 +11,7 @@ public class StackDLL <T> {
 
     private String stackIsFull = "Too many items in a stack";
 
-    private void throwStackIsFull() {
+    private void throwsStackIsFull() {
         throw new RuntimeException(stackIsFull);
     }
 
@@ -29,9 +29,9 @@ public class StackDLL <T> {
     }
 
     public void push(T data) {
-        if (actualSize == DEFAULT_SIZE)
-            throwStackIsFull();
         top++;
+        if (top == DEFAULT_SIZE)
+            throwsStackIsFull();
         doubleLinkedList.addLast(data);
         actualSize++;
     }
