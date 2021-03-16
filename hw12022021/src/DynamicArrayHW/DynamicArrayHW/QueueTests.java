@@ -1,2 +1,20 @@
-package DynamicArrayHW;public class QueueTests {
+package DynamicArrayHW;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class QueueTests extends Assertions {
+
+    @Test
+    public void getSize_size0_size1() {
+
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enQueue(5);
+
+        assertEquals(1, queue.getSize());
+    }
+
+    
+
 }

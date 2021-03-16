@@ -23,7 +23,7 @@ public class DynamicArray <T> {
     }
 
     public int size() {
-        return dataArr.length;
+        return currentSize;
     }
 
     private void throwsNegativeSizeExc() {
