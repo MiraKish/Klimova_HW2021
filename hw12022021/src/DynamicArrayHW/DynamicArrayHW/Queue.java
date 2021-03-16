@@ -27,6 +27,11 @@ public class Queue <T> {
         rear++;
     }
 
-    
+    public T deQueue() {
+        T value = dynamicArray.getVal(front);
+        front++;
+
+        return value;
+    }
 
 }
