@@ -141,7 +141,6 @@ public class DynamicArrayTests extends Assertions {
     }
 
 
-
     // bad tests
 
     @Test
