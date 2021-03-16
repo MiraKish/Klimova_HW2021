@@ -2,16 +2,17 @@ package DynamicArrayHW;
 
 public class DynamicArray <T> {
 
-    private int DEFAULT_SIZE = 15;
-    private int capacity = 16;
+    private int currentSize = 0;
+    private int capacity = 15;
     private T[] dataArr;
+    private int queueSize = 0;
 
     private String wrongIndexExc = "Negative index";
     private String outOfBordersExc = "Going beyond the array borders";
     private String negativeSizeExc = "Negative size of the array";
 
     public DynamicArray() {
-        dataArr = (T[]) new Object[DEFAULT_SIZE];
+        dataArr = (T[]) new Object[capacity];
     }
 
     public DynamicArray(int size){
@@ -38,14 +39,15 @@ public class DynamicArray <T> {
     }
 
     public void setVal(int index, T value) {
-        if (size() <= index || index < 0)
+        if (capacity <= index || index < 0)
             throwsBordersExc();
         else
             dataArr[index] = value;
+        currentSize++;
     }
 
     public T getVal(int index) {
-        if (size() <= index || index < 0)
+        if (capacity <= index || index < 0)
             throwsBordersExc();
         return dataArr[index];
     }
@@ -75,6 +77,7 @@ public class DynamicArray <T> {
         for (int i = 0; i < size(); i++)
             newArr[i] = dataArr[i];
         dataArr = newArr;
+        currentSize++;
     }
 
     public void removeVal(int index) {
@@ -88,6 +91,7 @@ public class DynamicArray <T> {
         for (int i = index + 1; i < size(); i++) // смещаем на место удаленного идущие за ним значения
             newArr[i - 1] = getVal(i);
         dataArr = newArr;
+        currentSize--;
     }
 
     public int findLast(T value) {
@@ -113,6 +117,7 @@ public class DynamicArray <T> {
             addVal(value);
         else
             dataArr[index] = value;
+        currentSize++;
     }
 }
 
