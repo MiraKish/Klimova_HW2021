@@ -3,6 +3,7 @@ package DynamicArrayHW;
 public class Queue <T> {
     private int front = 0;
     private int rear = 0;
+    private int size = 0;
 
 
     DynamicArray<T> dynamicArray = new DynamicArray<>();
@@ -19,17 +20,23 @@ public class Queue <T> {
 //    }
 
     public int getSize() {
-        return dynamicArray.size();
+        return size;
+    }
+
+    public int getCapacity() {
+        return dynamicArray.getCapacity();
     }
 
     public void enQueue(T data) {
         dynamicArray.setVal(rear, data);
         rear++;
+        size++;
     }
 
     public T deQueue() {
         T value = dynamicArray.getVal(front);
         front++;
+        size--;
 
         return value;
     }
