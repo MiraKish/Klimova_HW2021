@@ -26,4 +26,15 @@ public class QueueTests extends Assertions {
         assertEquals(0, queue.getSize());
     }
 
+    @Test
+    public void enQueue_emptyArr_adds5() {
+
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enQueue(5);
+
+        assertEquals(5, queue.peek());
+    }
+
+
 }

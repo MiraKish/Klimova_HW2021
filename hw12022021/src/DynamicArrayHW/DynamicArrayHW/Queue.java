@@ -41,4 +41,7 @@ public class Queue <T> {
         return value;
     }
 
+    public T peek() {
+        return dynamicArray.getVal(front);
+    }
 }
