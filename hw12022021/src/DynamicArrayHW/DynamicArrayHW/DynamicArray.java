@@ -26,6 +26,10 @@ public class DynamicArray <T> {
         return currentSize;
     }
 
+    public int getCapacity() {
+        return dataArr.length;
+    }
+
     private void throwsNegativeSizeExc() {
         throw new RuntimeException(negativeSizeExc);
     }
