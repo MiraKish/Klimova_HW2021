@@ -15,6 +15,15 @@ public class QueueTests extends Assertions {
         assertEquals(1, queue.getSize());
     }
 
-    
+    @Test
+    public void getSize_size1_size0() {
+
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enQueue(5);
+        queue.deQueue();
+
+        assertEquals(0, queue.getSize());
+    }
 
 }
