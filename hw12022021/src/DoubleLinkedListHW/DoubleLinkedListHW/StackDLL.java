@@ -20,10 +20,10 @@ public class StackDLL <T> {
         throw new RuntimeException(emptyStack);
     }
 
-    public StackDLL() {
-        DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
-//        dataTop = dataStack.getHead();
-    }
+//    public StackDLL() {
+//        DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
+////        dataTop = dataStack.getHead();
+//    }
 
     public int getSize() {
         return doubleLinkedList.getSize();
