@@ -37,7 +37,7 @@ public class QueueTests extends Assertions {
     }
 
     @Test
-    public void deQueue_removesFront_frontIs7() {
+    public void deQueue_removesFront_frontIs8() {
 
         Queue<Integer> queue = new Queue<>();
 
@@ -45,7 +45,7 @@ public class QueueTests extends Assertions {
         queue.enQueue(8);
         queue.deQueue();
 
-        assertEquals(7, queue.peek());
+        assertEquals(8, queue.peek());
     }
 
     @Test
@@ -78,5 +78,22 @@ public class QueueTests extends Assertions {
         Queue<Integer> queue = new Queue<>();
 
         assertThrows(RuntimeException.class, () -> queue.deQueue());
+    }
+
+    @Test
+    public void enQueueAndDeQueue_removingAllValues_peek0() {
+
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enQueue(10);
+        queue.enQueue(5);
+        queue.enQueue(2);
+        queue.deQueue();
+        queue.enQueue(8);
+        queue.deQueue();
+        queue.deQueue();
+        queue.deQueue();
+
+        assertEquals(0, queue.peek());
     }
 }

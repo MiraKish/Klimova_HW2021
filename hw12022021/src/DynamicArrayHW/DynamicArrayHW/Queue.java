@@ -1,8 +1,8 @@
 package DynamicArrayHW;
 
 public class Queue <T> {
-    private int front = 0;
-    private int rear = 0;
+    private int front = -1;
+    private int rear = -1;
     private int size = 0;
 
 
@@ -41,13 +41,15 @@ public class Queue <T> {
             throwsFullQueue();
         }
 
-        rear++;
-        if(rear >= getCapacity() && size != getCapacity()){
+        rear = (rear + 1) % getCapacity();
+        if (rear >= getCapacity() && size != getCapacity()) {
             rear = 0;
         }
+
         if (size == 0 || size == 1) {
             front = rear;
         }
+
         dynamicArray.setVal(rear, data);
     }
 
@@ -56,16 +58,12 @@ public class Queue <T> {
             throwsEmptyQueue();
         }
 
-        front++;
-
-        if(front > getCapacity() - 1){
+        front = (front + 1) % getCapacity();
+        if (front > getCapacity() - 1){
             front = 0;
         }
-        if ()
-            
         size--;
     }
-
 
     public T peek() {
         return dynamicArray.getVal(front);
