@@ -8,16 +8,24 @@ public class Queue <T> {
 
     DynamicArray<T> dynamicArray = new DynamicArray<>();
 
-//    private String  = " ";
-//    private String  = " ";
-//
-//    private void throws() {
-//        throw new RuntimeException();
-//    }
-//
-//    private void throws() {
-//        throw new RuntimeException();
-//    }
+    private String emptyQueue = "Queue is empty, can't remove value!";
+    private String fullQueue = "Queue is full, can't add value!";
+
+    private void throwsEmptyQueue() {
+        throw new RuntimeException(emptyQueue);
+    }
+
+    private void throwsFullQueue() {
+        throw new RuntimeException(fullQueue);
+    }
+
+    public boolean emptyQueue() {
+        return dynamicArray.emptyArray();
+    }
+
+    public boolean fullQueue(){
+        return getSize() == getCapacity();
+    }
 
     public int getSize() {
         return size;
@@ -28,18 +36,33 @@ public class Queue <T> {
     }
 
     public void enQueue(T data) {
-        dynamicArray.setVal(rear, data);
+        if (fullQueue()) {
+            throwsFullQueue();
+//            increaseCapacity();
+        }
         rear++;
-        size++;
+
+        if(rear >= getCapacity() && getSize() != getCapacity()){
+            rear = 0;
+        }
+        dynamicArray.setVal(rear, data);
     }
 
     public T deQueue() {
+        if (emptyQueue()) {
+            throwsEmptyQueue();
+        }
         T value = dynamicArray.getVal(front);
         front++;
+
+        if(front > getCapacity()) {
+            front = 0;
+        }
         size--;
 
         return value;
     }
+
 
     public T peek() {
         return dynamicArray.getVal(front);
