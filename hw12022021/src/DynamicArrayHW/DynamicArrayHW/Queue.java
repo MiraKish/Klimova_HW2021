@@ -36,33 +36,29 @@ public class Queue <T> {
     }
 
     public void enQueue(T data) {
-        size++;
         if (fullQueue()) {
             throwsFullQueue();
-        }
+        } else {
+            rear = (rear + 1) % getCapacity();
+            dynamicArray.setVal(rear, data);
+            size++;
 
-        rear = (rear + 1) % getCapacity();
-        if (rear >= getCapacity() && size != getCapacity()) {
-            rear = 0;
+            if (front == -1) {
+                front = rear;
+            }
         }
-
-        if (size == 0 || size == 1) {
-            front = rear;
-        }
-
-        dynamicArray.setVal(rear, data);
     }
 
-    public void deQueue() {
+    public T deQueue() {
+        T element = dynamicArray.getVal(front);
         if (emptyQueue()) {
             throwsEmptyQueue();
+        } else {
+            dynamicArray.setVal(front, null);
+            front = (front + 1) % getCapacity();
+            size--;
         }
-
-        front = (front + 1) % getCapacity();
-        if (front > getCapacity() - 1){
-            front = 0;
-        }
-        size--;
+        return  element;
     }
 
     public T peek() {
