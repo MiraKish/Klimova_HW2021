@@ -81,7 +81,7 @@ public class QueueTests extends Assertions {
     }
 
     @Test
-    public void enQueueAndDeQueue_removingAllValues_peek0() {
+    public void enQueueAndDeQueue_removingAllValues_peekNull() {
 
         Queue<Integer> queue = new Queue<>();
 
@@ -94,6 +94,22 @@ public class QueueTests extends Assertions {
         queue.deQueue();
         queue.deQueue();
 
-        assertEquals(0, queue.peek());
+        assertEquals(null, queue.peek());
+    }
+
+    @Test
+    public void enQueueAndDeQueue_rearValueLeft_peek8() {
+
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enQueue(10);
+        queue.enQueue(5);
+        queue.enQueue(2);
+        queue.deQueue();
+        queue.enQueue(8);
+        queue.deQueue();
+        queue.deQueue();
+
+        assertEquals(8, queue.peek());
     }
 }
