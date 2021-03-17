@@ -71,4 +71,12 @@ public class QueueTests extends Assertions {
 
         assertThrows(RuntimeException.class, () -> queue.enQueue(9));
     }
+
+    @Test
+    public void deQueue_emptyQueue_throwsExc() {
+
+        Queue<Integer> queue = new Queue<>();
+
+        assertThrows(RuntimeException.class, () -> queue.deQueue());
+    }
 }
