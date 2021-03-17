@@ -23,10 +23,6 @@ public class Queue <T> {
         return dynamicArray.emptyArray();
     }
 
-    public boolean fullQueue(){
-        return getSize() == getCapacity();
-    }
-
     public int getSize() {
         return size;
     }
@@ -35,13 +31,16 @@ public class Queue <T> {
         return dynamicArray.getCapacity();
     }
 
+    public boolean fullQueue(){
+        return dynamicArray.fullArray();
+    }
+
     public void enQueue(T data) {
         if (fullQueue()) {
             throwsFullQueue();
-//            increaseCapacity();
         }
-        rear++;
 
+        rear++;
         if(rear >= getCapacity() && getSize() != getCapacity()){
             rear = 0;
         }

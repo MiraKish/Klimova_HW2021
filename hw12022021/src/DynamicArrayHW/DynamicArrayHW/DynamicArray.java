@@ -27,7 +27,17 @@ public class DynamicArray <T> {
     }
 
     public int getCapacity() {
-        return dataArr.length;
+        return capacity;
+    }
+
+    public boolean emptyArray() {
+        if (currentSize == 0)
+            return true;
+        return false;
+    }
+
+    public boolean fullArray(){
+        return size() == getCapacity();
     }
 
     private void throwsNegativeSizeExc() {

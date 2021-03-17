@@ -47,4 +47,28 @@ public class QueueTests extends Assertions {
 
         assertEquals(7, queue.peek());
     }
+
+    @Test
+    public void enQueue_fullQueue_throwsExc() {
+
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enQueue(0);
+        queue.enQueue(1);
+        queue.enQueue(2);
+        queue.enQueue(3);
+        queue.enQueue(4);
+        queue.enQueue(5);
+        queue.enQueue(6);
+        queue.enQueue(7);
+        queue.enQueue(8);
+        queue.enQueue(9);
+        queue.enQueue(10);
+        queue.enQueue(11);
+        queue.enQueue(12);
+        queue.enQueue(13);
+        queue.enQueue(14);
+
+        assertThrows(RuntimeException.class, () -> queue.enQueue(9));
+    }
 }
