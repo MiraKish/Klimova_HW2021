@@ -36,5 +36,15 @@ public class QueueTests extends Assertions {
         assertEquals(5, queue.peek());
     }
 
+    @Test
+    public void deQueue_removesFront_frontIs7() {
 
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enQueue(7);
+        queue.enQueue(8);
+        queue.deQueue();
+
+        assertEquals(7, queue.peek());
+    }
 }
