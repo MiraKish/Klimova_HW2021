@@ -44,5 +44,16 @@ public class DequeTests extends Assertions {
         assertThrows(RuntimeException.class, () -> deque.popBack());
     }
 
+    @Test
+    public void peekBack_getsTail_tailEquals8() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushBack("6");
+        deque.pushBack("8");
+
+        assertEquals("8", deque.peekBack());
+    }
+
     
 }
