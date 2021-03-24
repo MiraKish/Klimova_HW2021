@@ -94,5 +94,29 @@ public class DequeTests extends Assertions {
         assertThrows(RuntimeException.class, () -> deque.popFront());
     }
 
-    
+    @Test
+    public void peekFront_getsHead_headEquals8() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushFront("6");
+        deque.pushFront("8");
+
+        assertEquals("8", deque.peekFront());
+    }
+
+    @Test
+    public void getSize_size0_newSize() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushFront("6");
+        deque.pushFront("8");
+        deque.pushBack("6");
+        deque.pushBack("8");
+        deque.popFront();
+        deque.popBack();
+
+        assertEquals(2, deque.getSize());
+    }
 }
