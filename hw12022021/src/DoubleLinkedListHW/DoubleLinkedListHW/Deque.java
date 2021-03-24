@@ -49,6 +49,20 @@ public class Deque <T> {
         return getTail();
     }
 
-    
+    public void pushFront(T value) {
+        doubleLinkedList.addFirst(value);
+    }
 
+    public T popFront() {
+        if (emptyDeque()) {
+            throwsEmptyDeque();
+        }
+        T element = doubleLinkedList.getHead();
+        doubleLinkedList.removeFirst();
+        return element;
+    }
+
+    public T peekFront() {
+        return  getHead();
+    }
 }
