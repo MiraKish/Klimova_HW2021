@@ -37,8 +37,18 @@ public class Deque <T> {
     }
 
     public T popBack() {
+        if (emptyDeque()) {
+            throwsEmptyDeque();
+        }
         T element = doubleLinkedList.getTail();
         doubleLinkedList.removeLast();
         return element;
     }
+
+    public T peekBack() {
+        return getTail();
+    }
+
+    
+
 }
