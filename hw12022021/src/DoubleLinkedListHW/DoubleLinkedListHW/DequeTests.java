@@ -55,5 +55,15 @@ public class DequeTests extends Assertions {
         assertEquals("8", deque.peekBack());
     }
 
+    @Test
+    public void pushFront_addsNewHead_headEquals6() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushFront("6");
+
+        assertEquals("6", deque.getHead());
+    }
+
     
 }
