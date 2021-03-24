@@ -5,12 +5,7 @@ public class Deque <T> {
 
     DoubleLinkedList<T> doubleLinkedList = new DoubleLinkedList<>();
 
-    private String dequeIsFull = "Too many items in a stack";
     private String emptyDeque = "Stack is empty";
-
-    private void throwsDequeIsFull() {
-        throw new RuntimeException(dequeIsFull);
-    }
 
     private void throwsEmptyDeque() {
         throw new RuntimeException(emptyDeque);
@@ -28,12 +23,9 @@ public class Deque <T> {
         return doubleLinkedList.emptyList();
     }
 
-//    public boolean fullDeque() {
-//        if ()
-//    }
-
     public void pushBack(T value) {
         doubleLinkedList.addLast(value);
+        actualSize++;
     }
 
     public T popBack() {
@@ -42,6 +34,7 @@ public class Deque <T> {
         }
         T element = doubleLinkedList.getTail();
         doubleLinkedList.removeLast();
+        actualSize--;
         return element;
     }
 
@@ -51,6 +44,7 @@ public class Deque <T> {
 
     public void pushFront(T value) {
         doubleLinkedList.addFirst(value);
+        actualSize++;
     }
 
     public T popFront() {
@@ -59,10 +53,15 @@ public class Deque <T> {
         }
         T element = doubleLinkedList.getHead();
         doubleLinkedList.removeFirst();
+        actualSize--;
         return element;
     }
 
     public T peekFront() {
         return  getHead();
+    }
+
+    public int getSize() {
+        return actualSize;
     }
 }
