@@ -65,5 +65,34 @@ public class DequeTests extends Assertions {
         assertEquals("6", deque.getHead());
     }
 
+    @Test
+    public void popFront_getsOldHead_oldHeadEquals6() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushFront("6");
+
+        assertEquals("6", deque.popFront());
+    }
+
+    @Test
+    public void popFront_removesHead_headEqualsNull() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushFront("6");
+        deque.popFront();
+
+        assertEquals(null, deque.getHead());
+    }
+
+    @Test
+    public void popFront_emptyList_throwsException() {
+
+        Deque<String> deque = new Deque<>();
+
+        assertThrows(RuntimeException.class, () -> deque.popFront());
+    }
+
     
 }
