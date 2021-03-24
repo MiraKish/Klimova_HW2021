@@ -28,7 +28,17 @@ public class Deque <T> {
         return doubleLinkedList.emptyList();
     }
 
-    public boolean fullDeque() {
-        if ()
+//    public boolean fullDeque() {
+//        if ()
+//    }
+
+    public void pushBack(T value) {
+        doubleLinkedList.addLast(value);
+    }
+
+    public T popBack() {
+        T element = doubleLinkedList.getTail();
+        doubleLinkedList.removeLast();
+        return element;
     }
 }
