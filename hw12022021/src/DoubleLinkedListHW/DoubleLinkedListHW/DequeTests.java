@@ -15,5 +15,34 @@ public class DequeTests extends Assertions {
         assertEquals("6", deque.getTail());
     }
 
+    @Test
+    public void popBack_getsOldTail_oldTailEquals6() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushBack("6");
+
+        assertEquals("6", deque.popBack());
+    }
+
+    @Test
+    public void popBack_removesTail_tailEqualsNull() {
+
+        Deque<String> deque = new Deque<>();
+
+        deque.pushBack("6");
+        deque.popBack();
+
+        assertEquals(null, deque.getTail());
+    }
+
+    @Test
+    public void popBack_emptyList_throwsException() {
+
+        Deque<String> deque = new Deque<>();
+
+        assertThrows(RuntimeException.class, () -> deque.popBack());
+    }
+
     
 }
