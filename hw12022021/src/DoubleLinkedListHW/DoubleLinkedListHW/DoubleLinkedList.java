@@ -23,7 +23,7 @@ public class DoubleLinkedList <T> {
     }
 
     public boolean emptyList() {
-        return head == null;
+        return head == null && tail == null;
     }
 
     public T getHead() {
@@ -115,7 +115,7 @@ public class DoubleLinkedList <T> {
     }
 
     public void removeLast() {
-        if (head.next == null)
+        if (tail.previous == null)
             head = null;
         else
             tail.previous.next = null;
