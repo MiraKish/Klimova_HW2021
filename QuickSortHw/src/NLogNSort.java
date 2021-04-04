@@ -5,6 +5,16 @@ public class NLogNSort {
     private int[] numbers;
     private int number;
 
+    // checking whether array is empty or null
+    public void sort(int[] values) {
+        if (values ==null || values.length==0){
+            return;
+        }
+        this.numbers = values;
+        number = values.length;
+        quicksort(0, number - 1);
+    }
+
     private void quicksort(int low, int high) {
         int i = low, j = high;
 
