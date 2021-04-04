@@ -20,6 +20,11 @@ public class NLogNSort {
                 j--;
             }
 
+            if (i <= j) {
+                exchange(i, j);
+                i++;
+                j--;
+            }
             //
         }
         // Recursion
