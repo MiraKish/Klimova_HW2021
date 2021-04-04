@@ -35,7 +35,6 @@ public class NLogNSort {
                 i++;
                 j--;
             }
-            //
         }
         // Recursion
         if (low < j)
