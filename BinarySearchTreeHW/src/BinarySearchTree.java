@@ -1,45 +1,58 @@
 public class BinarySearchTree {
     Node root;
 
-    public  class Node {
-        private int key;
-        private Node left;
-        private Node right;
-        String name;
+    public class Node {
+        int key;
+        Node left;
+        Node right;
 
-        public Node(int key, String name) {
-            this.key = key;
-            this.name = name;
+        public Node(int data){
+            key = data;
+            left = right = null;
         }
     }
 
-    public void addNode(int key, String name) {
-        Node newNode = new Node(key, name);
+    BinarySearchTree(){
+        root = null;
+    }
 
+    boolean search(int key)  {
+        root = searchRec(root, key);
+        if (root!= null)
+            return true;
+        else
+            return false;
+    }
+
+    //recursive search function
+    public Node searchRec(Node root, int key)  {
+        if (root == null || root.key == key) {
+            return root;
+        }
+        if (root.key > key) {
+            return searchRec(root.left, key);
+        }
+        return searchRec(root.right, key);
+    }
+
+    public void insert(int key)  {
+        root = insertRec(root, key);
+    }
+
+    //recursive insert function
+    public Node insertRec(Node root, int key) {
         if (root == null) {
-            root = newNode;
-        } else {
-            Node focusNode = root;
-            Node parent;
-
-            while (true) {
-                parent = focusNode;
-                if (key < focusNode.key) {
-                    focusNode = focusNode.left;
-
-                    if (focusNode == null) {
-                        parent.left = newNode;
-                        return;
-                    }
-                } else {
-                    focusNode = focusNode.right;
-
-                     if (focusNode == null) {
-                         parent.right = newNode;
-                         return;
-                     }
-                }
-            }
+            root = new Node(key);
+            return root;
         }
+
+        //traverse the tree
+        if (key < root.key)
+            root.left = insertRec(root.left, key);
+        else if (key > root.key)
+            root.right = insertRec(root.right, key);
+        return root;
     }
+
+    
 }
