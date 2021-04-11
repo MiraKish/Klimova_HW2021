@@ -11,5 +11,17 @@ public class BinarySearchTreeTest extends Assertions {
         assertEquals(true, tree.search(8));
     }
 
+    @Test
+    public void min_findsMinOfTree_minEquals1() {
+        BinarySearchTree tree = new BinarySearchTree();
+
+        tree.insert( 8);
+        tree.insert( 2);
+        tree.insert( 1);
+        tree.insert( 4);
+
+
+        assertEquals(1, tree.minValue(tree.root));
+    }
 
 }
