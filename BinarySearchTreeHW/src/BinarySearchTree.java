@@ -62,4 +62,13 @@ public class BinarySearchTree {
         }
         return minVal;
     }
+
+    public int maxValue(Node root)  {
+        int maxVal = root.key;
+        while (root.right != null)  {
+            maxVal = root.right.key;
+            root = root.right;
+        }
+        return maxVal;
+    }
 }
