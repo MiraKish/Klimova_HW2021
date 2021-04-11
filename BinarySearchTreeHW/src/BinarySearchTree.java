@@ -71,4 +71,32 @@ public class BinarySearchTree {
         }
         return maxVal;
     }
+
+    public void delete(int key) {
+        root = deleteRec(root, key);
+    }
+
+    //recursive delete function
+    public Node deleteRec(Node root, int key)  {
+        if (root == null) {
+            return root;
+        }
+
+        //traverse the tree
+        if (key < root.key) {
+            root.left = deleteRec(root.left, key);
+        } else if (key > root.key) {
+            root.right = deleteRec(root.right, key);
+        } else {
+            if (root.left == null) {
+                return root.right;
+            } else if (root.right == null) {
+                return root.left;
+            }
+
+            root.key = minValue(root.right);
+            root.right = deleteRec(root.right, root.key);
+        }
+        return root;
+    }
 }
