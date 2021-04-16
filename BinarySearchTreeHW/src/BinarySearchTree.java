@@ -1,7 +1,9 @@
+import com.sun.source.tree.BreakTree;
+
 public class BinarySearchTree {
     Node root;
 
-    public class Node {
+    public static class Node {
         String key;
         Node left;
         Node right;
@@ -108,7 +110,7 @@ public class BinarySearchTree {
     public Node successorRec(Node root, String value) {
         Node current = searchRec(root, value);
         if (current == null) {
-            return null;
+            return current;
         }
 
         if (current.right != null) {
@@ -121,5 +123,30 @@ public class BinarySearchTree {
             current = tmp;
         }
         return current;
+    }
+
+    public Node predecessor(Node root, String value) {
+        return predecessorRec(root, value);
+    }
+
+// не знаю ):
+    public Node predecessorRec(Node root, String value) {
+        Node current = searchRec(root, value);
+        Node predecessor = null;
+        if (current == null) {
+            return current;
+        }
+        while(!current.key.equals(value)){
+            if(value.compareTo(current.key) < 0){
+                current = current.left;
+            } else {
+                predecessor = current;
+                current = current.right;
+            }
+        }
+        if (current.left != null) {
+            predecessor = maxValue(current.left);
+        }
+        return predecessor;
     }
 }

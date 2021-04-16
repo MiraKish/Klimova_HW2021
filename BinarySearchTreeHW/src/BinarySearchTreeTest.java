@@ -65,4 +65,19 @@ public class BinarySearchTreeTest extends Assertions {
 
         assertEquals("2bc", tree.successor(tree.root, "1ab").key());
     }
+
+    //пыстояно возвращается NullPointerException
+    @Test
+    public void predecessor_findsPreOfUght_preEqualsTrs() {
+        BinarySearchTree tree = new BinarySearchTree();
+
+        tree.insert( "ibh");
+        tree.insert( "Trs");
+        tree.insert( "ught!");
+        tree.insert( "fvvee");
+        tree.insert( "uge");
+        tree.insert( "f");
+
+        assertEquals("Trs", tree.predecessor(tree.root, "ught!").key());
+    }
 }
