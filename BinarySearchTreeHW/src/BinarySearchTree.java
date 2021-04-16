@@ -48,7 +48,6 @@ public class BinarySearchTree {
             root = new Node(key);
             return root;
         }
-
         //traverse the tree
         if (key.compareTo(root.key) > 0)
             root.left = insertRec(root.left, key);
