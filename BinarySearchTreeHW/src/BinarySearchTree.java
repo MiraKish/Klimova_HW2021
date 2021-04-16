@@ -119,7 +119,6 @@ public class BinarySearchTree {
             Node tmp = root.left;
             while (tmp.right != null)
                 tmp = tmp.right;
-
             current = tmp;
         }
         return current;
@@ -129,24 +128,21 @@ public class BinarySearchTree {
         return predecessorRec(root, value);
     }
 
-// не знаю ):
     public Node predecessorRec(Node root, String value) {
-        Node current = searchRec(root, value);
-        Node predecessor = null;
-        if (current == null) {
-            return current;
-        }
-        while(!current.key.equals(value)){
-            if(value.compareTo(current.key) < 0){
-                current = current.left;
-            } else {
-                predecessor = current;
-                current = current.right;
+        Node pre = null;
+        while (root != null) {
+            if (root.key.equals(value)) {
+                if (root.left != null) {
+                    pre = root.left;
+                    while (pre.right != null)
+                        pre = pre.right;
+                }
+                return pre;
+            } else if (value.compareTo(root.key) > 0) {
+                pre = root;
+                root = root.right;
             }
         }
-        if (current.left != null) {
-            predecessor = maxValue(current.left);
-        }
-        return predecessor;
+        return pre;
     }
 }
