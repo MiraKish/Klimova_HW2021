@@ -10,6 +10,10 @@ public class BinarySearchTree {
             key = data;
             left = right = null;
         }
+
+        public String key() {
+            return key;
+        }
     }
 
     BinarySearchTree() {
