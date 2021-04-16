@@ -15,27 +15,27 @@ public class BinarySearchTreeTest extends Assertions {
     public void minValue_findsMinOfTree_minEquals1() {
         BinarySearchTree tree = new BinarySearchTree();
 
-        tree.insert( "8");
-        tree.insert( "2");
-        tree.insert( "1");
-        tree.insert( "4");
+        tree.insert( "asd");
+        tree.insert( "asdfhg");
+        tree.insert( "r");
+        tree.insert( "dfdg");
 
 
-        assertEquals("1", tree.minValue(tree.root));
+        assertEquals("r", tree.minValue(tree.root).key());
     }
 
     @Test
-    public void maxValue_findsMaxOfTree_minEquals1() {
+    public void maxValue_findsMaxOfTree_maxEquals1() {
         BinarySearchTree tree = new BinarySearchTree();
 
-        tree.insert( "3");
-        tree.insert( "2");
-        tree.insert( "1");
-        tree.insert( "8");
-        tree.insert( "4");
+        tree.insert( "t");
+        tree.insert( "uy");
+        tree.insert( "fes");
+        tree.insert( "ega");
+        tree.insert( "eakdfndk");
 
 
-        assertEquals("8", tree.maxValue(tree.root));
+        assertEquals("eakdfndk", tree.maxValue(tree.root).key());
     }
 
     @Test
