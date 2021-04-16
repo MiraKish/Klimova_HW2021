@@ -53,19 +53,16 @@ public class BinarySearchTreeTest extends Assertions {
         assertEquals(false, tree.search("8"));
     }
 
-//    @Test
-//    public void deletety_deletes8_searchFor8EqualsFalse() {
-//        BinarySearchTree tree = new BinarySearchTree();
-//
-//        tree.insert( 3);
-//        tree.insert( 2);
-//        tree.insert( 1);
-//        tree.insert( 8);
-//        tree.insert( 4);
-//        tree.insert( 9);
-//        tree.delete(4);
-//
-//
-//        assertEquals(3, tree.successor(tree.root, 2));
-//    }
+    @Test
+    public void successor_findsSucOf1ab_sucEquals2bc() {
+        BinarySearchTree tree = new BinarySearchTree();
+
+        tree.insert( "1ab");
+        tree.insert( "2bc");
+        tree.insert( "ertgf");
+        tree.insert( "4gess");
+
+
+        assertEquals("2bc", tree.successor(tree.root, "1ab").key());
+    }
 }

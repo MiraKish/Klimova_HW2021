@@ -101,28 +101,25 @@ public class BinarySearchTree {
         return root;
     }
 
-//    public Node successor(Node root, String value) {
-//        Node current = searchRec(root, value);
-//        if (current == null) {
-//            return null;
-//        }
-//
-//        if (current.right != null) {
-//            return minValue(current.right);
-//        } else {
-//            Node successor = null;
-//            Node ancestor = null;
-//
-//            while (ancestor != current) {
-//                if (current < ancestor) {
-//                    successor = ancestor;
-//                    ancestor = ancestor.left;
-//                } else {
-//                    ancestor = ancestor.right;
-//                }
-//            }
-//            assert successor != null;
-//            return successor;
-//        }
-//    }
+    public Node successor(Node root, String value) {
+        return successorRec(root, value);
+    }
+
+    public Node successorRec(Node root, String value) {
+        Node current = searchRec(root, value);
+        if (current == null) {
+            return null;
+        }
+
+        if (current.right != null) {
+            return minValue(current.right);
+        } else {
+            Node tmp = root.left;
+            while (tmp.right != null)
+                tmp = tmp.right;
+
+            current = tmp;
+        }
+        return current;
+    }
 }
