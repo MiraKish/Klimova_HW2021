@@ -1,14 +1,16 @@
-public class BalancingTree {
+public class AVLTree {
     Node root;
 
     public static class Node {
         String key;
+        int height;
         Node left;
         Node right;
 
         public Node(String data) {
             key = data;
             left = right = null;
+            height = 1;
         }
 
         public String key() {
@@ -16,8 +18,15 @@ public class BalancingTree {
         }
     }
 
-    BalancingTree() {
+    AVLTree() {
         root = null;
+    }
+
+    int height(Node node) {
+        if (node == null)
+            return 0;
+
+        return node.height;
     }
 
     boolean search(String key) {
@@ -97,5 +106,6 @@ public class BalancingTree {
         return pre;
     }
 
+    public Node insert()
 
 }

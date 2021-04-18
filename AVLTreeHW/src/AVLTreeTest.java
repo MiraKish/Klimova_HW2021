@@ -1,10 +1,10 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class BalancingTreeTest extends Assertions {
+public class AVLTreeTest extends Assertions {
     @Test
     public void minValue_findsMinOfTree_minEquals1() {
-        BalancingTree tree = new BalancingTree();
+        AVLTree tree = new AVLTree();
 
         tree.insert( "asd");
         tree.insert( "asdfhg");
@@ -17,7 +17,7 @@ public class BalancingTreeTest extends Assertions {
 
     @Test
     public void maxValue_findsMaxOfTree_maxEquals1() {
-        BalancingTree tree = new BalancingTree();
+        AVLTree tree = new AVLTree();
 
         tree.insert( "t");
         tree.insert( "uy");
@@ -31,7 +31,7 @@ public class BalancingTreeTest extends Assertions {
 
     @Test
     public void successor_findsSucOf1ab_sucEquals2bc() {
-        BalancingTree tree = new BalancingTree();
+        AVLTree tree = new AVLTree();
 
         tree.insert( "1ab");
         tree.insert( "2bc");
@@ -44,7 +44,7 @@ public class BalancingTreeTest extends Assertions {
 
     @Test
     public void predecessor_findsPreOfUght_preEqualsTrs() {
-        BalancingTree tree = new BalancingTree();
+        AVLTree tree = new AVLTree();
 
         tree.insert( "ibh");
         tree.insert( "Trs");
