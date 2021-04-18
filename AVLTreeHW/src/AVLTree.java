@@ -69,6 +69,16 @@ public class AVLTree {
         return height(node.left) - height(node.right);
     }
 
+    public String preOrder(Node root) {
+        String a;
+        if (root != null) {
+            a = root.key;
+            preOrder(root.left);
+            preOrder(root.right);
+            return a;
+        }
+        return null;
+    }
 
     boolean search(String key) {
         root = searchRec(root, key);

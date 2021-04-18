@@ -50,4 +50,26 @@ public class AVLTreeTest extends Assertions {
 
         assertEquals("ab", tree.predecessor(tree.root, "abc").key());
     }
+
+    @Test
+    public void insert_addsNewValue_value8EqualsTrue() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert( "8");
+
+        assertEquals(true, tree.search("8"));
+    }
+
+    @Test
+    public void insert_rightOrder_showsRightRoot() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert("60");
+        tree.insert("10");
+        tree.insert("40");
+        tree.insert("50");
+        tree.insert("25");
+
+        assertEquals("40", tree.preOrder(tree.root));
+    }
 }
