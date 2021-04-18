@@ -6,51 +6,48 @@ public class AVLTreeTest extends Assertions {
     public void minValue_findsMinOfTree_minEquals1() {
         AVLTree tree = new AVLTree();
 
-        tree.insert( "asd");
-        tree.insert( "asdfhg");
-        tree.insert( "r");
-        tree.insert( "dfdg");
+        tree.insert( "a");
+        tree.insert( "abc");
+        tree.insert( "ab");
+        tree.insert( "abcd");
 
-
-        assertEquals("r", tree.minValue(tree.root).key());
+        assertEquals("a", tree.minValue(tree.root).key());
     }
 
     @Test
     public void maxValue_findsMaxOfTree_maxEquals1() {
         AVLTree tree = new AVLTree();
 
-        tree.insert( "t");
-        tree.insert( "uy");
-        tree.insert( "fes");
-        tree.insert( "ega");
-        tree.insert( "eakdfndk");
+        tree.insert( "a");
+        tree.insert( "abc");
+        tree.insert( "abcd");
+        tree.insert( "ab");
 
-
-        assertEquals("eakdfndk", tree.maxValue(tree.root).key());
+        assertEquals("abcd", tree.maxValue(tree.root).key());
     }
 
     @Test
     public void successor_findsSucOf1ab_sucEquals2bc() {
         AVLTree tree = new AVLTree();
 
-        tree.insert( "1ab");
-        tree.insert( "2bc");
-        tree.insert( "ertgf");
-        tree.insert( "4gess");
+        tree.insert( "a");
+        tree.insert( "ab");
+        tree.insert( "abc");
+        tree.insert( "abcd");
 
 
-        assertEquals("2bc", tree.successor(tree.root, "1ab").key());
+        assertEquals("abc", tree.successor(tree.root, "ab").key());
     }
 
     @Test
     public void predecessor_findsPreOfUght_preEqualsTrs() {
         AVLTree tree = new AVLTree();
 
-        tree.insert( "ibh");
-        tree.insert( "Trs");
-        tree.insert( "ught!");
-        tree.insert( "fvvee");
+        tree.insert( "a");
+        tree.insert( "ab");
+        tree.insert( "abc");
+        tree.insert( "abcd");
 
-        assertEquals("Trs", tree.predecessor(tree.root, "ught!").key());
+        assertEquals("ab", tree.predecessor(tree.root, "abc").key());
     }
 }

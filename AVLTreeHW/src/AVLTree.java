@@ -22,15 +22,43 @@ public class AVLTree {
         root = null;
     }
 
-    int height(Node node) {
+    public int height(Node node) {
         if (node == null)
             return 0;
 
         return node.height;
     }
 
-    int max(int a, int b) {
+    public int max(int a, int b) {
         return Math.max(a, b);
+    }
+
+    //rooted with y
+    public Node rightRotate(Node y) {
+        Node x = y.left;
+        Node t2 = x.right;
+
+        x.right = y;
+        y.left = t2;
+
+        y.height = max(height(y.left), height(y.right)) + 1;
+        x.height = max(height(x.left), height(x.right)) + 1;
+
+        return x;
+    }
+
+    //rooted with x
+    public Node leftRotate(Node x) {
+        Node y = x.right;
+        Node t2 = y.left;
+
+        y.left = x;
+        x.right = t2;
+
+        x.height = max(height(x.left), height(x.right)) + 1;
+        y.height = max(height(y.left), height(y.right)) + 1;
+
+        return y;
     }
 
     boolean search(String key) {
@@ -40,7 +68,7 @@ public class AVLTree {
 
     //recursive search function
     public Node searchRec(Node root, String key) {
-        if (root == null || root.key == key) {
+        if (root == null || root.key.equals(key)) {
             return root;
         }
         if (key.compareTo(root.key) < 0) {
@@ -110,6 +138,13 @@ public class AVLTree {
         return pre;
     }
 
-    public Node insert()
+    public void insert(String key) {
+        root = insertRec(root, key);
+    }
+
+    public Node insertRec(Node root, String key) {
+
+
+    }
 
 }
