@@ -203,4 +203,12 @@ public class AVLTree {
         return root;
     }
 
+    public void delete(String key) {
+        root = deleteRec(root, key);
+    }
+
+    //recursive delete function
+    public Node deleteRec(Node root, String key) {
+
+    }
 }
