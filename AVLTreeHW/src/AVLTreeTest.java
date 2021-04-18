@@ -87,4 +87,14 @@ public class AVLTreeTest extends Assertions {
 
         assertEquals(false, tree.search("8"));
     }
+
+    @Test
+    public void height_deleteRoot_height0() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert("60");
+        tree.delete("60");
+
+        assertEquals(0, tree.height(tree.root));
+    }
 }
