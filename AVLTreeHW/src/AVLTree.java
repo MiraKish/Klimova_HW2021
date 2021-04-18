@@ -61,6 +61,15 @@ public class AVLTree {
         return y;
     }
 
+    //balance factor of node
+    public int getBalance(Node node) {
+        if (node == null)
+            return 0;
+
+        return height(node.left) - height(node.right);
+    }
+
+
     boolean search(String key) {
         root = searchRec(root, key);
         return root != null;
@@ -143,8 +152,45 @@ public class AVLTree {
     }
 
     public Node insertRec(Node root, String key) {
+        // 1. normal BST insertion
+        if (root == null) {
+            return (new Node(key));
+        }
+        if (key.compareTo(root.key) < 0) {
+            root.left = insertRec(root.left, key);
+        } else if (key.compareTo(root.key) > 0) {
+            root.right = insertRec(root.right, key);
+        } else {
+            return root;
+        }
 
+        root.height = 1 + max(height(root.left),
+                height(root.right));
 
+        int balance = getBalance(root);
+
+        // Left Left Case
+        if (balance > 1 && key.compareTo(root.key) < 0) {
+            return rightRotate(root);
+        }
+
+        // Right Right Case
+        if (balance < -1 && key.compareTo(root.key) > 0) {
+            return leftRotate(root);
+        }
+
+        // Left Right Case
+        if (balance > 1 && key.compareTo(root.key) > 0) {
+            root.left = leftRotate(root.left);
+            return rightRotate(root);
+        }
+
+        // Right Left Case
+        if (balance < -1 && key.compareTo(root.key) < 0) {
+            root.right = rightRotate(root.right);
+            return leftRotate(root);
+        }
+        return root;
     }
 
 }
