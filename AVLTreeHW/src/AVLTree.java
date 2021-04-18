@@ -162,10 +162,10 @@ public class AVLTree {
     }
 
     public Node insertRec(Node root, String key) {
-        // 1. normal BST insertion
         if (root == null) {
             return (new Node(key));
         }
+
         if (key.compareTo(root.key) < 0) {
             root.left = insertRec(root.left, key);
         } else if (key.compareTo(root.key) > 0) {
@@ -209,6 +209,68 @@ public class AVLTree {
 
     //recursive delete function
     public Node deleteRec(Node root, String key) {
+        if (root == null) {
+            return root;
+        }
 
+        if (key.compareTo(root.key) < 0) {
+            root.left = deleteRec(root.left, key);
+        } else if (key.compareTo(root.key) > 0) {
+            root.right = deleteRec(root.right, key);
+        } else {
+            // node with only one child or no child
+            if ((root.left == null) || (root.right == null)) {
+                Node temp = null;
+                if (temp == root.left) {
+                    temp = root.right;
+                } else {
+                    temp = root.left;
+                }
+
+                // No child case
+                if (temp == null) {
+                    temp = root;
+                    root = null;
+                } else {// One child case
+                    root = temp;
+                }
+            } else {
+                Node temp = minValue(root.right);
+
+                root.key = temp.key;
+
+                root.right = deleteRec(root.right, temp.key);
+            }
+        }
+        if (root == null) {
+            return null;
+        }
+        root.height = max(height(root.left), height(root.right)) + 1;
+
+        int balance = getBalance(root);
+
+        // Left Left Case
+        if (balance > 1 && getBalance(root.left) >= 0) {
+            return rightRotate(root);
+        }
+
+        // Left Right Case
+        if (balance > 1 && getBalance(root.left) < 0) {
+            root.left = leftRotate(root.left);
+            return rightRotate(root);
+        }
+
+        // Right Right Case
+        if (balance < -1 && getBalance(root.right) <= 0) {
+            return leftRotate(root);
+        }
+
+        // Right Left Case
+        if (balance < -1 && getBalance(root.right) > 0) {
+            root.right = rightRotate(root.right);
+            return leftRotate(root);
+        }
+        return root;
     }
 }
+
