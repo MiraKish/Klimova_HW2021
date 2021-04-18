@@ -29,6 +29,10 @@ public class AVLTree {
         return node.height;
     }
 
+    int max(int a, int b) {
+        return Math.max(a, b);
+    }
+
     boolean search(String key) {
         root = searchRec(root, key);
         return root != null;
