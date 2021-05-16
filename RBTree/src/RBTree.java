@@ -43,6 +43,17 @@ public class RBTree {
         return Math.max(a, b);
     }
 
+    private void rbTransplant(Node u, Node v){
+        if (u.parent == null) {
+            root = v;
+        } else if (u == u.parent.left){
+            u.parent.left = v;
+        } else {
+            u.parent.right = v;
+        }
+        v.parent = u.parent;
+    }
+
     //rooted with y
     public Node rightRotate(Node y) {
         Node x = y.left;
@@ -288,7 +299,7 @@ public class RBTree {
         root.color = 0;
     }
 
-    public void insert(String key) {
+    public void insert(Node root, String key) {
 
         Node node = new Node(key);
         node.parent = null;
@@ -331,4 +342,5 @@ public class RBTree {
         // fix the tree
         fixInsert(node);
     }
+
 }
