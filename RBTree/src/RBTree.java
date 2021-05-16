@@ -10,11 +10,12 @@ public class RBTree {
 
     public static class Node {
         String key;
-        int height;
-        int color;
+        Node parent;
         Node left;
         Node right;
-        Node parent;
+        int color;
+
+        int height;
 
         public Node(String data) {
             key = data;
@@ -285,5 +286,49 @@ public class RBTree {
             }
         }
         root.color = 0;
+    }
+
+    public void insert(String key) {
+
+        Node node = new Node(key);
+        node.parent = null;
+        node.key = key;
+        node.left = null;
+        node.right = null;
+        node.color = 1; // new node must be red
+
+        Node y = null;
+        Node x = this.root;
+
+        while (x != null) {
+            y = x;
+            if (node.key.compareTo(x.key) < 0) {
+                x = x.left;
+            } else {
+                x = x.right;
+            }
+        }
+
+        // y is parent of x
+        node.parent = y;
+        if (y == null) {
+            root = node;
+        } else if (node.key.compareTo(y.key) < 0) {
+            y.left = node;
+        } else {
+            y.right = node;
+        }
+
+        if (node.parent == null){
+            node.color = 0;
+            return;
+        }
+
+        if (node.parent.parent == null) {
+            return;
+        }
+
+        // fix the tree
+        fixInsert(node);
     }
 }
