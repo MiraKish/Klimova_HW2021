@@ -40,4 +40,12 @@ public class ListHashTable {
     public boolean search(int ele) {
         return arr[ele % capacity] == ele;
     }
+
+    public void delete(int ele) {
+        if (arr[ele % capacity] == ele) {
+            arr[ele % capacity] = 0;
+        } else {
+            System.out.println("Element not found");
+        }
+    }
 }
