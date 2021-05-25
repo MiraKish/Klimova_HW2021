@@ -27,7 +27,6 @@ public class ListHashTable {
         if (n % 2 == 0) {
             n++;
         }
-
         for (; !isPrime(n); n += 2);
 
         return n;
@@ -47,5 +46,10 @@ public class ListHashTable {
         } else {
             System.out.println("Element not found");
         }
+    }
+
+    public boolean get(int key) {
+        int index = key % capacity;
+        return arr[index] == key;
     }
 }

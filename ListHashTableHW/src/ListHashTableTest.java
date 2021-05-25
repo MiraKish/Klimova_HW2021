@@ -24,4 +24,26 @@ public class ListHashTableTest extends Assertions {
 
         assertEquals(false, table.search(11));
     }
+
+    @Test
+    public void get_number8_returnsTrue() {
+        ListHashTable table = new ListHashTable(10);
+
+        table.insert(4);
+        table.insert(8);
+        table.insert(111);
+
+        assertEquals(true, table.get(8));
+    }
+
+    @Test
+    public void get_number8GotDeleted_returnsFalse() {
+        ListHashTable table = new ListHashTable(10);
+
+        table.insert(4);
+        table.insert(8);
+        table.delete(8);
+
+        assertEquals(false, table.get(8));
+    }
 }
