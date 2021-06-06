@@ -18,4 +18,13 @@ public class AdjacencyListGraph {
         adj.get(i).add(j);
         adj.get(j).add(i);
     }
+
+    public void removeEdge(int i, int j) {
+        for (int k = 0; k < adj.get(i).size(); k++) {
+            if (adj.get(i).get(k) == j) {
+                adj.get(i).remove(k);
+                return;
+            }
+        }
+    }
 }
