@@ -21,4 +21,9 @@ public class AdjacencyMatrixGraph {
         adjMatrix[i][j] = false;
         adjMatrix[j][i] = false;
     }
+
+    // Checks whether graph has an edge or not
+    public boolean hasEdge(int i, int j) {
+        return adjMatrix[i][j];
+    }
 }
