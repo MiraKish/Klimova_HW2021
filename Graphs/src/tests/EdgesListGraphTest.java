@@ -1,20 +1,21 @@
 package tests;
+import code.EdgesListGraph;
 
-import code.AdjacencyMatrixGraph;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
+
 public class EdgesListGraphTest extends Assertions {
-//    @Test
-//    public void addEdge_addes3NewEdges_allNewEdgesEqualsTrue() {
-//        AdjacencyMatrixGraph graph = new AdjacencyMatrixGraph(5);
-//
-//        graph.addEdge(1, 2);
-//        graph.addEdge(2,4);
-//        graph.addEdge(3,4);
-//
-//        assertEquals(true, graph.hasEdge(1,2));
-//        assertEquals(true, graph.hasEdge(2,4));
-//        assertEquals(true, graph.hasEdge(3,4));
-//    }
+    @Test
+    public void addEdge_adds1NewEdges_newEdgeEqualsTrue() {
+        EdgesListGraph.Graph graph = new EdgesListGraph.Graph();
+
+        EdgesListGraph.Node v0 = new EdgesListGraph.Node(0);
+        EdgesListGraph.Node v1 = new EdgesListGraph.Node(1);
+
+        graph.AddVertex(v0);
+        graph.AddVertex(v1);
+
+        assertEquals(true, graph.AddEdge(v0, v1, 2));
+    }
 }
