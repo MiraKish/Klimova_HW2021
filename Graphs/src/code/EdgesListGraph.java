@@ -40,4 +40,26 @@ public class EdgesListGraph {
             return destVertex;
         }
     }
+
+    public static class Graph {
+        private HashSet<Node> nodes;
+
+        public Graph() {
+            nodes = new HashSet<>();
+        }
+
+        //if adds - true (found)
+        public boolean AddEdge(Node v1, Node v2, int weight) {
+            return v1.getEdges().add(new Edge(v2, weight)) && v2.getEdges().add(new Edge(v1, weight));
+        }
+
+        //if removes - false (not found)
+        public boolean RemoveEdge(Node v1, Node v2, int weight) {
+            return v1.getEdges().remove(new Edge(v2, weight)) && v2.getEdges().add(new Edge(v1, weight));
+        }
+
+        public boolean AddVertex(Node v) {
+            return nodes.add(v);
+        }
+    }
 }
