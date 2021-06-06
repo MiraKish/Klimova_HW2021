@@ -34,5 +34,11 @@ public class AdjacencyListGraphTest extends Assertions {
         assertEquals(false, graph.hasEdge(2, 4));
         assertEquals(false, graph.hasEdge(3, 4));
     }
+    
+    @Test
+    public void addEdge_outOfBorders_throwsExc() {
+        AdjacencyListGraph graph = new AdjacencyListGraph(5);
 
+        assertThrows(RuntimeException.class, () -> graph.addEdge(2,5));
+    }
 }
