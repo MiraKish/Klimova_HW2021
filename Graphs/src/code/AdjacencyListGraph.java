@@ -6,6 +6,12 @@ public class AdjacencyListGraph {
     int n;
     LinkedList<LinkedList<Integer> > adj;
 
+    private String outOfBorders = "Your edges are out of borders!";
+
+    private void throwsOutOfBordersExc() {
+        throw new RuntimeException(outOfBorders);
+    }
+
     public AdjacencyListGraph(int n0) {
         n = n0;
         adj = new LinkedList<LinkedList<Integer>>();
@@ -15,6 +21,9 @@ public class AdjacencyListGraph {
     }
 
     public void addEdge(int i, int j) {
+        if (i > n || j > n) {
+            throwsOutOfBordersExc();
+        }
         adj.get(i).add(j);
         adj.get(j).add(i);
     }
