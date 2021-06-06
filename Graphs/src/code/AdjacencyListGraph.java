@@ -27,4 +27,8 @@ public class AdjacencyListGraph {
             }
         }
     }
+
+    public boolean hasEdge(int i, int j) {
+        return adj.get(i).contains(j);
+    }
 }
