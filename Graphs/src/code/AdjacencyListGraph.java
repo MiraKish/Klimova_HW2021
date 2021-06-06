@@ -13,4 +13,9 @@ public class AdjacencyListGraph {
             adj.add(new LinkedList<Integer>());
         }
     }
+
+    public void addEdge(int i, int j) {
+        adj.get(i).add(j);
+        adj.get(j).add(i);
+    }
 }
