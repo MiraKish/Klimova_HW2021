@@ -10,8 +10,7 @@ class HashNode<K, V> {
     HashNode<K, V> next;
 
     // Constructor
-    public HashNode(K key, V value, int hashCode)
-    {
+    public HashNode(K key, V value, int hashCode) {
         this.key = key;
         this.value = value;
         this.hashCode = hashCode;
@@ -78,5 +77,20 @@ public class OffsetHashTable<K, V> {
         return head.value;
     }
 
+    public V get(K key) {
+        int bucketIndex = getIndex(key);
+        int hashCode = hashCode(key);
+
+        HashNode<K, V> head = array.get(bucketIndex);
+
+        while (head != null) {
+            if (head.key.equals(key) && head.hashCode == hashCode)
+                return head.value;
+            head = head.next;
+        }
+        return null;
+    }
+
+    
 
 }
