@@ -53,5 +53,30 @@ public class OffsetHashTable<K, V> {
         return index;
     }
 
+    public V delete(K key) {
+        int bucketIndex = getIndex(key);
+        int hashCode = hashCode(key);
+
+        HashNode<K, V> head = array.get(bucketIndex);
+        HashNode<K, V> prev = null;
+
+        while (head != null) {
+            if (head.key.equals(key) && hashCode == head.hashCode)
+                break;
+
+            prev = head;
+            head = head.next;
+        }
+        if (head == null)
+            return null;
+        size--;
+
+        if (prev != null)
+            prev.next = head.next;
+        else
+            array.set(bucketIndex, head.next);
+        return head.value;
+    }
+
 
 }
