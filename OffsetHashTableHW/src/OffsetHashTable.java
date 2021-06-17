@@ -45,5 +45,13 @@ public class OffsetHashTable<K, V> {
         return Objects.hashCode(key);
     }
 
-    
+    private int getIndex(K key) {
+        int hashCode = hashCode(key);
+        int index = hashCode % numBuckets;
+        // key.hashCode() coule be negative.
+        index = index < 0 ? index * -1 : index;
+        return index;
+    }
+
+
 }
