@@ -21,5 +21,16 @@ public class OffsetHashTableTest extends Assertions {
         assertEquals(null, table.get(5));
     }
 
+    @Test
+    public void size_inserts3Times_size3() {
+        OffsetHashTable<Integer, Integer> table = new OffsetHashTable<>();
+
+        table.insert(2, 3);
+        table.insert(5, 7);
+        table.insert(1, 8);
+
+        assertEquals(3, table.size());
+    }
+
     
 }
