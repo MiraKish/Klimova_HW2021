@@ -103,7 +103,6 @@ public class OffsetHashTable<K, V> {
             }
             head = head.next;
         }
-
         size++;
         head = array.get(bucketIndex);
         HashNode<K, V> newNode
