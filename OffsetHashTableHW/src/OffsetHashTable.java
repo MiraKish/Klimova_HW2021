@@ -91,6 +91,24 @@ public class OffsetHashTable<K, V> {
         return null;
     }
 
-    
+    public void insert(K key, V value) {
+        int bucketIndex = getIndex(key);
+        int hashCode = hashCode(key);
+        HashNode<K, V> head = array.get(bucketIndex);
 
+        while (head != null) {
+            if (head.key.equals(key) && head.hashCode == hashCode) {
+                head.value = value;
+                return;
+            }
+            head = head.next;
+        }
+
+        size++;
+        head = array.get(bucketIndex);
+        HashNode<K, V> newNode
+                = new HashNode<K, V>(key, value, hashCode);
+        newNode.next = head;
+        array.set(bucketIndex, newNode);
+    }
 }
